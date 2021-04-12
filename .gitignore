@@ -1,0 +1,7 @@
+# build
+.nova/
+
+# Mac stuff
+.DS_Store
+*.bak
+
