@@ -5,3 +5,6 @@
 .DS_Store
 *.bak
 
+# compiled files
+*.css
+*.css.map
