@@ -8,3 +8,10 @@
 # compiled files
 *.css
 *.css.map
+
+# node
+node_modules/
+
+# sanity
+dist/
+
