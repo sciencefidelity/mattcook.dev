@@ -1,5 +1,5 @@
 # build
-.nova/
+.nova
 
 # Mac stuff
 .DS_Store
@@ -10,8 +10,13 @@
 *.css.map
 
 # node
-node_modules/
+node_modules
+*.log
 
 # sanity
-dist/
+dist
 
+# svelte
+.svelte-kit
+build
+functions
