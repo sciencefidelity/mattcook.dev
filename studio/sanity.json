@@ -3,10 +3,6 @@
   "project": {
     "name": "Matt Cook"
   },
-  "api": {
-    "projectId": "binfz6bl",
-    "dataset": "production"
-  },
   "plugins": [
     "@sanity/base",
     "@sanity/components",

@@ -3,6 +3,7 @@
 .nova
 *.bak
 .env
+.env.*
 
 # node
 node_modules
