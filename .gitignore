@@ -1,13 +1,8 @@
-# build
-.nova
-
-# Mac stuff
+# local
 .DS_Store
+.nova
 *.bak
-
-# compiled files
-*.css
-*.css.map
+.env
 
 # node
 node_modules
