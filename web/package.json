@@ -1,6 +1,11 @@
 {
   "name": "mattcook.dev",
+  "private": true,
   "version": "0.0.1",
+  "description": "",
+  "main": "package.json",
+  "author": "Matt Cook <sciencefidelity@hotmail.com>",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "svelte-kit dev --host 0.0.0.0",
     "build": "svelte-kit build",
