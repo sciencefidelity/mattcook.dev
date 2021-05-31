@@ -1,0 +1,26 @@
+
+@use 'scss/normalize';
+@use 'scss/typography' as t;
+@use "scss/colors" as c;
+@use "scss/breakpoints" as b;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: t.$serif;
+  color: c.$blue;
+  background: c.$purple;
+}
