@@ -4,6 +4,7 @@
 *.bak
 .env
 .env.*
+ss
 
 # node
 node_modules
