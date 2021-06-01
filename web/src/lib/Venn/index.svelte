@@ -27,11 +27,12 @@
 }
 
 .venn {
+  font-size: 0.695vw;
   position: relative;
-  width: 81rem;
+  width: 81em;
   transform: rotate(-7deg);
-  padding-top: 7rem;
-  margin-left: -2rem;
+  padding-top: 7em;
+  margin-left: -2em;
   @extend %after;
   :nth-child(1) {
     @include circle($bottom: 37.41%, $left: 19.705%);

@@ -24,4 +24,5 @@ body {
   color: c.$blue;
   background: c.$purple;
   overflow: hidden;
+  height: calc(100vh - 12em);
 }

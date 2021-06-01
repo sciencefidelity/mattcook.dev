@@ -10,6 +10,7 @@ import github from "./github-brands.svg"
 
 <svelte:head>
   <title>Hi! I'm Matt</title>
+  <meta name="description" content="I'm a multi-media artist and digital creative.">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&family=Space+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 </svelte:head>
@@ -26,7 +27,7 @@ import github from "./github-brands.svg"
 
   <a href="https://github.com/sciencefidelity" target="_blank" rel="noreferrer">
     <span class="screen-reader-text">Visit me on Github</span>
-    <img src={github} alt="github" class="github"/>
+    <img src={github} alt="github" class="github" width="145px" height="150px"/>
   </a>
 </section>
 
@@ -36,11 +37,13 @@ import github from "./github-brands.svg"
 @use "../scss/breakpoints" as b;
 
 .main {
+  font-size: 0.695vw;
   position: relative;
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 12em);
+  overflow: hidden;
   &__headline {
-    padding: 10.6rem 0 0 10.6rem;
-    font-size: 4.5rem;
+    padding: 2.36em 0 0 2.36em;
+    font-size: 4.5em;
     font-family: t.$sans;
     transform: rotate(4.5deg);
     line-height: 0;
@@ -50,24 +53,25 @@ import github from "./github-brands.svg"
   }
   &__contact {
     position: absolute;
-    top: 72%;
-    right: 11rem;
+    top: 49em;
+    right: 11em;
     transform: rotate(4.5deg);
   }
   &__email {
     font-family: t.$mono;
     font-weight: 400;
-    font-size: 2.8rem;
+    font-size: 2.8em;
     text-decoration: none;
     color: c.$blue;
   }
 }
 
 .github {
+  font-size: 0.695vw;
   position: absolute;
-  width: 4.4rem;
-  right: 4.5rem;
-  bottom: 5rem;
+  width: 4.4em;
+  right: 4.5em;
+  top: 58.5em;
 }
 
 // ********** accessibility **********
