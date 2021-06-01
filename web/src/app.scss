@@ -20,7 +20,8 @@ html {
 }
 
 body {
-  font-family: t.$serif;
+  font-family: t.$sans;
   color: c.$blue;
   background: c.$purple;
+  overflow: hidden;
 }
