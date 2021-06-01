@@ -3,6 +3,7 @@
 </script>
 
 <script lang="ts">
+import Venn from '$lib/Venn/index.svelte';
 import github from "../svg/github-brands.svg"
 </script>
 
@@ -14,6 +15,8 @@ import github from "../svg/github-brands.svg"
 
 <section class="main">
   <h2 class="main__headline">I'm a multi-media artist and digital creative<span class="main__punctuation">.</span></h2>
+
+  <Venn/>
 
   <a href="https://github.com/sciencefidelity" target="_blank" >
     <span class="screen-reader-text">Visit me on Github</span>
