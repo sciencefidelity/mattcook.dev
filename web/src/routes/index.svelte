@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-
+import github from "../svg/github-brands.svg"
 </script>
 
 <svelte:head>
@@ -14,6 +14,11 @@
 
 <section class="main">
   <h2 class="main__headline">I'm a multi-media artist and digital creative<span class="main__punctuation">.</span></h2>
+
+  <a href="https://github.com/sciencefidelity" target="_blank" >
+    <span class="screen-reader-text">Visit me on Github</span>
+    <img src={github} alt="github" class="github"/>
+  </a>
 </section>
 
 <style lang="scss">
@@ -22,6 +27,8 @@
 @use "../scss/breakpoints" as b;
 
 .main {
+  position: relative;
+  height: calc(100vh - 12rem);
   &__headline {
     padding: 10.6rem 0 0 10.6rem;
     font-size: 4.5rem;
@@ -32,6 +39,13 @@
   &__punctuation {
     color: c.$pink;
   }
+}
+
+.github {
+  position: absolute;
+  width: 4.4rem;
+  right: 4.5rem;
+  bottom: 5rem;
 }
 
 </style>

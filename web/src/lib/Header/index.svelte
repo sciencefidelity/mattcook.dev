@@ -17,7 +17,6 @@ import asterisk from "../../svg/asterisk-solid.svg"
 
 .header {
   background: c.$dark;
-  // overflow: hidden;
   position: relative;
   height: 12rem;
   &__title {
