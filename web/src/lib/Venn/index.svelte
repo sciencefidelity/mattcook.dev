@@ -9,7 +9,6 @@
 
 
 <style lang="scss">
-@use "../../scss/typography" as t;
 @use "../../scss/colors" as c;
 @use "../../scss/breakpoints" as b;
 
