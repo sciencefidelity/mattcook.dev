@@ -25,9 +25,9 @@
   &__headline {
     padding: 10.6rem 0 0 10.6rem;
     font-size: 4.5rem;
+    font-family: t.$sans;
     transform: rotate(4.5deg);
     line-height: 0;
-    font-family: t.$sans;
   }
   &__punctuation {
     color: c.$pink;
