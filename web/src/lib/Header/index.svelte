@@ -29,7 +29,6 @@ import asterisk from "../../svg/asterisk-solid.svg"
     line-height: 0;
     color: c.$blue;
     padding: 0 0 0 5rem;
-    // margin-top: 3.5rem;
     transform: translateY(-0.5rem) rotate(-4.5deg);
   }
   &__punctuation {
@@ -43,11 +42,6 @@ import asterisk from "../../svg/asterisk-solid.svg"
     width: 29.5rem;
     transform: rotate(-11.8deg)
   }
-}
-
-.fa-asterisk {
-  fill: c.$pink;
-  color: c.$pink;
 }
 
 </style>
