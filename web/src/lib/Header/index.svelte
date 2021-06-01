@@ -4,11 +4,6 @@
 
 <header>
   <h1>Hi<span class="punctuation">!</span> I'm Matt<span class="punctuation">.</span></h1>
-  </nav>
-
-  <div class="corner">
-    <!-- TODO put something else here? github link? -->
-  </div>
 </header>
 
 <style lang="scss">
@@ -23,5 +18,9 @@ header {
 
 h1 {
   color: c.$blue;
+}
+
+.punctuation {
+  color: c.$pink;
 }
 </style>
