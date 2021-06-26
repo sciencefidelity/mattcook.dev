@@ -27,7 +27,7 @@ import github from "./github-brands.svg"
 
   <a href="https://github.com/sciencefidelity" target="_blank" rel="noreferrer">
     <span class="screen-reader-text">Visit me on Github</span>
-    <img src={github} alt="github" class="github" width="145px" height="150px"/>
+    <img src={github} alt="github" class="github"/>
   </a>
 </section>
 

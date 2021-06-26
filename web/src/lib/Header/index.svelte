@@ -7,7 +7,7 @@ import asterisk from "./asterisk-solid.svg"
     Hi<span class="header__punctuation">!</span>
     I'm Matt<span class="header__punctuation">.</span>
   </h1>
-  <img src={asterisk} alt="Asterisk" class="header__asterisk" width="150px" height="150px"/>
+  <img src={asterisk} alt="Asterisk" class="header__asterisk"/>
 </header>
 
 <style lang="scss">
@@ -40,6 +40,7 @@ import asterisk from "./asterisk-solid.svg"
     right: -1em;
     color: c.$pink;
     width: 29.5em;
+    // height: 29.5em;
     transform: rotate(-11.8deg)
   }
 }
