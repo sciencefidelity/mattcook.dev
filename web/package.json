@@ -1,7 +1,7 @@
 {
   "name": "mattcook.dev",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Matt Cook portfolio",
   "main": "package.json",
   "author": "Matt Cook <sciencefidelity@hotmail.com>",
