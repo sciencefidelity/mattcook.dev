@@ -1,0 +1,14 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ncd studio\nyarn build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ncd studio\nyarn dev"
+    }
+  },
+  "identifier" : "53AC2B1A-B26D-41F0-92DF-326583BD5248",
+  "openLogOnRun" : "start"
+}

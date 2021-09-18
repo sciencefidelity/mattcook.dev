@@ -1,0 +1,14 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\npnpm build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\npnpm dev"
+    }
+  },
+  "identifier" : "C5F698ED-3D8F-459C-A30F-82F43EAC3ADA",
+  "openLogOnRun" : "start"
+}
