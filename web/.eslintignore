@@ -5,3 +5,4 @@ build/
 functions/
 node_modules/
 static/
+pnpm-lock.yaml
