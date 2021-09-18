@@ -11,8 +11,7 @@ module.exports = {
     }
   ],
   rules: {
-    "indent": ["error", 2],
-    "quotes": "double"
+    "indent": ['error', 2]
   },
   settings: {
     'svelte3/typescript': () => require('typescript')
