@@ -6,6 +6,8 @@
   "main": "package.json",
   "author": "Matt Cook <sciencefidelity@hotmail.com>",
   "license": "UNLICENSED",
+  "repository": "git+https://github.com/sciencefidelity/mattcook.dev.git",
+  "homepage": "https://mattcook.dev",
   "scripts": {
     "dev": "svelte-kit dev --host 0.0.0.0",
     "build": "svelte-kit build",
@@ -34,7 +36,5 @@
     "@lukeed/uuid": "^2.0.0",
     "@sveltejs/adapter-node": "^1.0.0-next.23",
     "cookie": "^0.4.1"
-  },
-  "repository": "git+https://github.com/sciencefidelity/mattcook.dev.git",
-  "homepage": "https://mattcook.dev"
+  }
 }
