@@ -41,7 +41,7 @@ import asterisk from './asterisk-solid.svg'
     color: c.$pink;
     width: 29.5em;
     // height: 29.5em;
-    transform: rotate(-11.8deg)
+    transform: rotate(-11.8deg);
   }
 }
 
