@@ -11,5 +11,6 @@
     "graphql-deploy": "pnpm run graphql-deploy",
     "lint": "pnpm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "devDependencies": {}
 }

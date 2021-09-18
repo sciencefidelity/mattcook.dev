@@ -1,5 +1,5 @@
 <script lang="ts">
-import asterisk from "./asterisk-solid.svg"
+import asterisk from './asterisk-solid.svg'
 </script>
 
 <header class="header">
