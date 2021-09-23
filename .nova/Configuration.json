@@ -1,6 +1,4 @@
 {
-  "apexskier.eslint.config.eslintConfigPath" : "\/Users\/matt\/Sites\/mattcook.dev\/web\/.eslintrc.js",
-  "apexskier.eslint.config.eslintPath" : "\/Users\/matt\/Sites\/mattcook.dev\/web\/node_modules\/.bin\/eslint",
   "apexskier.eslint.config.fixOnSave" : "Enable",
   "editor.default_syntax" : "svelte",
   "tommasonegri.vue.config.vetur.completion.autoImport" : "Disable",
