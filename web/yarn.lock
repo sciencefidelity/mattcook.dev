@@ -99,12 +99,12 @@
     picomatch "^2.2.2"
 
 "@sveltejs/adapter-netlify@next":
-  version "1.0.0-next.31"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.31.tgz#f7accd1895709fae27a42d782acb14b934a4f286"
-  integrity sha512-MmN8OLXVLmc51MpoSXJyd4M+MSO3z2nI+rmMy0UklQ4iwYrKXBj2fz53KVpJkdY+36B0NrQipNHYT8yW7u/4EA==
+  version "1.0.0-next.32"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.32.tgz#fe177483365cf87cc132c8cc175df3ceb2cd91f4"
+  integrity sha512-nJIn806J1p5+YwwYN6EzSslAENfEuSuoNcRJZZsoI/PRJDjgpUJm3Y58iL0ZbaLEMS6iGyMFz2jjXAAUefpGHQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
-    esbuild "^0.12.5"
+    esbuild "^0.13.3"
 
 "@sveltejs/adapter-node@^1.0.0-next.23":
   version "1.0.0-next.49"
@@ -560,12 +560,12 @@ esbuild-windows-arm64@0.13.3:
   resolved "https://registry.yarnpkg.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.13.3.tgz#a236199a26b1205573dcb571f966189326a4c953"
   integrity sha512-nP7H0Y2a6OJd3Qi1Q8sehhyP4x4JoXK4S5y6FzH2vgaJgiyEurzFxjUufGdMaw+RxtxiwD/uRndUgwaZ2JD8lg==
 
-esbuild@^0.12.28, esbuild@^0.12.5:
+esbuild@^0.12.28:
   version "0.12.28"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.28.tgz#84da0d2a0d0dee181281545271e0d65cf6fab1ef"
   integrity sha512-pZ0FrWZXlvQOATlp14lRSk1N9GkeJ3vLIwOcUoo3ICQn9WNR4rWoNi81pbn6sC1iYUy7QPqNzI3+AEzokwyVcA==
 
-esbuild@^0.13.2:
+esbuild@^0.13.2, esbuild@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.13.3.tgz#cc9fc347fc81ff6440cdd1fdb9fe65c02eddcc97"
   integrity sha512-98xovMLKnyhv3gcReUuAEi5Ig1rK6SIgvsJuBIcfwzqGSEHsV8UJjMlmkhHoHMf9XZybMpE9Zax8AA8f7i2hlQ==
