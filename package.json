@@ -1,7 +1,19 @@
 {
-  "private": true,
   "name": "mattcook.dev",
-  "version": "0.0.1",
+  "description": "Matt Cook – Artist, digital creative, developer",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Matt Cook <matt@sciencefidelity.co.uk>",
+  "license": "UNLICENCED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sciencefidelity/mattcook.git"
+  },
+  "homepage": "https://mattcook.dev",
+  "keywords": [
+    "sanity",
+    "svelte"
+  ],
   "scripts": {
     "build": "pnpm run build --parallel",
     "dev": "pnpm run dev --parallel",
@@ -13,8 +25,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.32.0",
-    "@typescript-eslint/parser": "^4.32.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.2.1"
   }

@@ -1,18 +1,23 @@
 {
-  "name": "mattcook",
+  "name": "mattcook.dev",
+  "description": "Matt Cook – Artist, digital creative, developer",
   "private": true,
   "version": "0.1.0",
-  "description": "",
-  "main": "package.json",
-  "author": "Matt Cook <sciencefidelity@hotmail.com>",
-  "license": "UNLICENSED",
+  "author": "Matt Cook <matt@sciencefidelity.co.uk>",
+  "license": "UNLICENCED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sciencefidelity/mattcook.git"
+  },
+  "homepage": "https://mattcook.dev",
+  "keywords": [
+    "sanity",
+    "svelte"
+  ],
   "scripts": {
     "dev": "sanity start --host=0.0.0.0",
     "build": "sanity build"
   },
-  "keywords": [
-    "sanity"
-  ],
   "dependencies": {
     "@sanity/base": "^2.17.2",
     "@sanity/components": "^2.14.0",
@@ -25,9 +30,5 @@
     "react": "^17.0",
     "react-dom": "^17.0",
     "styled-components": "^5.3.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:sciencefidelity/mattcook.git"
   }
 }
