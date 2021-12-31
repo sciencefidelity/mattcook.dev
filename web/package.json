@@ -12,10 +12,22 @@
   },
   "homepage": "https://mattcook.dev",
   "scripts": {
-    "dev": "svelte-kit dev --host 0.0.0.0",
+    "dev": "svelte-kit dev --host",
     "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
-    "lint": "eslint"
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview --host",
+    "clean": "rm -rf .svelte-kit build package",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "concurrently 'yarn:lint:*'",
+    "lint:js": "eslint --ext .js,.ts,.svelte .",
+    "lint:format": "prettier --check --plugin-search-dir=. '**/*.{ts,js,json,md,yml,svelte}'",
+    "lint:styles": "stylelint '**/*.{svelte,scss}' --ignore-path .eslintignore",
+    "fix": "concurrently 'yarn:fix:*'",
+    "fix:js": "eslint --ext .js,.ts,.svelte --fix .",
+    "fix:format": "prettier --write --plugin-search-dir=. '**/*.{ts,js,json,md,yml,svelte}'",
+    "fix:styles": "stylelint --fix '**/*.{svelte,scss}' --ignore-path .eslintignore",
+    "test": "echo \"This template does not include a test runner.\" && exit 1"
   },
   "dependencies": {
     "sanitize.css": "^13.0.0"
