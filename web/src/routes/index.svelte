@@ -26,18 +26,17 @@
 
 <section class="main">
   <h2 class="main__headline">
-    I'm a multi-media artist and digital creative<span class="main__punctuation"
-      >.</span
-    >
+    I'm a multi-media artist and digital creative
+    <span class="main__punctuation">.</span>
   </h2>
 
   <Venn />
   <Logos />
 
   <div class="main__contact">
-    <a href="mailto:matt@sciencefidelity.co.uk" class="main__email"
-      >matt@sciencefidelity.co.uk</a
-    >
+    <a href="mailto:matt@sciencefidelity.co.uk" class="main__email">
+      matt@sciencefidelity.co.uk
+    </a>
   </div>
 
   <a href="https://github.com/sciencefidelity" target="_blank" rel="noreferrer">
@@ -46,6 +45,7 @@
   </a>
 </section>
 
+<!-- prettier-ignore -->
 <style lang="scss">
   @use '../styles/foundation/typography' as t;
 

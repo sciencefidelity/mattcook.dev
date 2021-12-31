@@ -7,3 +7,6 @@ node_modules
 static
 pnpm-lock.yaml
 .nova
+*.scss
+*.css
+*.css.map

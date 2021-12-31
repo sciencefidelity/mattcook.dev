@@ -10,6 +10,7 @@
   <img src={asterisk} alt="Asterisk" class="header__asterisk" />
 </header>
 
+<!-- prettier-ignore -->
 <style lang="scss">
   @use '../../styles/foundation/typography' as t;
   @use '../../styles/foundation/breakpoints' as b;

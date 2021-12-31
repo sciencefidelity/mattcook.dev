@@ -1,3 +1,22 @@
+<script lang="ts">
+  import javascript from "./js-square-brands.svg"
+  import node from "./node-js-brands.svg"
+  import sass from "./sass-brands.svg"
+  import vuejs from "./vuejs-brands.svg"
+  import react from "./react-brands.svg"
+  import angular from "./angular-brands.svg"
+</script>
+
+<div class="logos">
+  <img src={javascript} alt="JavaScript" class="logos__javascript" />
+  <img src={node} alt="Nodejs" class="logos__node" />
+  <img src={sass} alt="Sass" class="logos__sass" />
+  <img src={vuejs} alt="Asterisk" class="logos__vuejs" />
+  <img src={react} alt="Asterisk" class="logos__react" />
+  <img src={angular} alt="Asterisk" class="logos__angular" />
+</div>
+
+<!-- prettier-ignore -->
 <style lang="scss">
   @use '../../styles/foundation/breakpoints' as b;
 
@@ -34,21 +53,3 @@
     }
   }
 </style>
-
-<script lang="ts">
-  import javascript from "./js-square-brands.svg"
-  import node from "./node-js-brands.svg"
-  import sass from "./sass-brands.svg"
-  import vuejs from "./vuejs-brands.svg"
-  import react from "./react-brands.svg"
-  import angular from "./angular-brands.svg"
-</script>
-
-<div class="logos">
-  <img src={javascript} alt="JavaScript" class="logos__javascript" />
-  <img src={node} alt="Nodejs" class="logos__node" />
-  <img src={sass} alt="Sass" class="logos__sass" />
-  <img src={vuejs} alt="Asterisk" class="logos__vuejs" />
-  <img src={react} alt="Asterisk" class="logos__react" />
-  <img src={angular} alt="Asterisk" class="logos__angular" />
-</div>

@@ -1,3 +1,13 @@
+<div class="venn">
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+</div>
+
+<!-- prettier-ignore -->
 <style lang="scss">
   @use '../../styles/foundation/breakpoints' as b;
 
@@ -48,7 +58,12 @@
       );
     }
     :nth-child(5) {
-      @include circle($left: 40.5%, $bg: var(--red), $blend: difference, $op: 0.65);
+      @include circle(
+        $left: 40.5%,
+        $bg: var(--red),
+        $blend: difference,
+        $op: 0.65
+      );
     }
     :nth-child(6) {
       @include circle($bg: var(--cyan), $blend: difference, $op: 0.65);
@@ -63,15 +78,3 @@
     }
   }
 </style>
-
-<script lang="ts">
-</script>
-
-<div class="venn">
-  <div />
-  <div />
-  <div />
-  <div />
-  <div />
-  <div />
-</div>
