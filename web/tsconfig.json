@@ -12,13 +12,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "allowJs": false,
-    "checkJs": true,
+    "allowJs": true,
+    "checkJs": false,
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"]
     }
   },
-  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
-  "exclude": ["**/*.cjs"]
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 }

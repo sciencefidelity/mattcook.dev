@@ -1,14 +1,13 @@
 <script lang="ts">
-  import Header from '$lib/Header/index.svelte';
-  import '../app.scss';
+  import Header from "$lib/Header/index.svelte"
+  import "sanitize.css/sanitize.css"
+  import "sanitize.css/assets.css"
+  import "sanitize.css/reduce-motion.css"
+  import "sanitize.css/typography.css"
+  import "../app.scss"
 </script>
 
 <Header />
-
 <main>
   <slot />
 </main>
-
-<style>
-
-</style>
