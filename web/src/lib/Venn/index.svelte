@@ -1,13 +1,10 @@
 <style lang="scss">
-  @use '../../scss/colors' as c;
-  @use '../../scss/breakpoints' as b;
-
-  // ********* Venn Diagram *************
+  @use '../../styles/foundation/breakpoints' as b;
 
   @mixin circle(
     $bottom: 10.02%,
     $left: -1.91%,
-    $bg: c.$white,
+    $bg: var(--grey-000),
     $blend: normal,
     $op: 1
   ) {
@@ -45,16 +42,16 @@
       @include circle(
         $bottom: 37.41%,
         $left: 19.705%,
-        $bg: c.$green,
+        $bg: var(--green),
         $blend: difference,
         $op: 0.65
       );
     }
     :nth-child(5) {
-      @include circle($left: 40.5%, $bg: c.$red, $blend: difference, $op: 0.65);
+      @include circle($left: 40.5%, $bg: var(--red), $blend: difference, $op: 0.65);
     }
     :nth-child(6) {
-      @include circle($bg: c.$cyan, $blend: difference, $op: 0.65);
+      @include circle($bg: var(--cyan), $blend: difference, $op: 0.65);
     }
   }
 

@@ -1,13 +1,12 @@
 <style lang="scss">
-  @use '../../scss/typography' as t;
-  @use '../../scss/colors' as c;
-  @use '../../scss/breakpoints' as b;
+  @use '../../styles/foundation/typography' as t;
+  @use '../../styles/foundation/breakpoints' as b;
 
   .header {
     position: relative;
     height: 12em;
     font-size: 0.695vw;
-    background: c.$dark;
+    background: var(--dark);
     &__title {
       position: absolute;
       padding: 0 0 0 0.53em;
@@ -16,18 +15,18 @@
       font-style: italic;
       font-weight: 700;
       line-height: 0;
-      color: c.$blue;
+      color: var(--blue);
       transform: translateY(-0.5rem) rotate(-4.5deg);
     }
     &__punctuation {
-      color: c.$pink;
+      color: var(--pink);
     }
     &__asterisk {
       position: absolute;
       top: -3.8em;
       right: -1em;
       width: 29.5em;
-      color: c.$pink;
+      color: var(--pink);
       // height: 29.5em;
       transform: rotate(-11.8deg);
     }

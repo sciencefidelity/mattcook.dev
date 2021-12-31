@@ -4,7 +4,7 @@
   import "sanitize.css/assets.css"
   import "sanitize.css/reduce-motion.css"
   import "sanitize.css/typography.css"
-  import "../app.scss"
+  import "../styles/app.scss"
 </script>
 
 <Header />

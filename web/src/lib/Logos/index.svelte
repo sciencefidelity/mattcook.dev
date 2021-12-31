@@ -1,6 +1,5 @@
 <style lang="scss">
-  @use '../../scss/colors' as c;
-  @use '../../scss/breakpoints' as b;
+  @use '../../styles/foundation/breakpoints' as b;
 
   .logos {
     position: absolute;

@@ -16,7 +16,7 @@ module.exports = {
     sourceType: "module",
     ecmaVersion: 2020
   },
-  ignorePatterns: ["*.cjs"],
+  ignorePatterns: ["*.cjs", "*.scss"],
   overrides: [{ files: ["*.svelte"], processor: "svelte3/svelte3" }],
   rules: {
     indent: ["error", 2],
