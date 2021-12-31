@@ -74,6 +74,7 @@
       font-family: t.$mono;
       font-size: 2.8em;
       font-weight: 400;
+      line-height: 1.2;
       color: var(--blue);
       text-decoration: none;
     }

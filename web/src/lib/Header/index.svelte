@@ -1,3 +1,15 @@
+<script lang="ts">
+  import asterisk from "./asterisk-solid.svg"
+</script>
+
+<header class="header">
+  <h1 class="header__title">
+    Hi<span class="header__punctuation">!</span>
+    I'm Matt<span class="header__punctuation">.</span>
+  </h1>
+  <img src={asterisk} alt="Asterisk" class="header__asterisk" />
+</header>
+
 <style lang="scss">
   @use '../../styles/foundation/typography' as t;
   @use '../../styles/foundation/breakpoints' as b;
@@ -9,7 +21,7 @@
     background: var(--dark);
     &__title {
       position: absolute;
-      padding: 0 0 0 0.53em;
+      padding: 0.67em 0 0 0.51em;
       font-family: t.$mono;
       font-size: 9.6em;
       font-style: italic;
@@ -27,20 +39,7 @@
       right: -1em;
       width: 29.5em;
       color: var(--pink);
-      // height: 29.5em;
       transform: rotate(-11.8deg);
     }
   }
 </style>
-
-<script lang="ts">
-  import asterisk from "./asterisk-solid.svg"
-</script>
-
-<header class="header">
-  <h1 class="header__title">
-    Hi<span class="header__punctuation">!</span>
-    I'm Matt<span class="header__punctuation">.</span>
-  </h1>
-  <img src={asterisk} alt="Asterisk" class="header__asterisk" />
-</header>
