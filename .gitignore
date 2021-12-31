@@ -1,17 +1,17 @@
-# local
 .DS_Store
 *.bak
+*.local
 .env
 .env.*
-
-# node
+!.env.template
 node_modules
 *.log
-
-# sanity
 dist
-
-# svelte
 .svelte-kit
 build
 functions
+package
+*.css
+*.css.map
+.vercel
+.output
