@@ -1763,7 +1763,7 @@ postcss@^7.0.14:
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.3.11, postcss@^8.3.6, postcss@^8.4.0, postcss@^8.4.5, postcss@^8.4.7:
+postcss@^8.3.11, postcss@^8.3.6, postcss@^8.4.0, postcss@^8.4.5, postcss@^8.4.6, postcss@^8.4.7:
   version "8.4.7"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.7.tgz#f99862069ec4541de386bf57f5660a6c7a0875a8"
   integrity sha512-L9Ye3r6hkkCeOETQX6iOaWZgjp3LL6Lpqm6EtgbKrgqGGteRMNb9vzBfRL96YOSu8o7x3MfIH9Mo5cPJFGrW6A==
@@ -2301,10 +2301,10 @@ svelte-preprocess@^4.0.0, svelte-preprocess@^4.10.4:
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
 
-svelte@^3.46.3:
-  version "3.46.3"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.46.3.tgz#31202b0c795f276726d95b648b6dd413116257ac"
-  integrity sha512-mTOXvv74CVQqJHqoIZDprVfRKVVmYNadXP0VKnOEA54223kLGCr1nMrifS4Zx29qMt/xRB38Eq1D7dDH/fM8fQ==
+svelte@^3.46.4:
+  version "3.46.4"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.46.4.tgz#0c46bc4a3e20a2617a1b7dc43a722f9d6c084a38"
+  integrity sha512-qKJzw6DpA33CIa+C/rGp4AUdSfii0DOTCzj/2YpSKKayw5WGSS624Et9L1nU1k2OVRS9vaENQXp2CVZNU+xvIg==
 
 svg-tags@^1.0.0:
   version "1.0.0"
