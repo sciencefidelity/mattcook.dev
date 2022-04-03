@@ -1,19 +1,16 @@
-<script lang="ts">
-  import asterisk from "./asterisk-solid.svg"
-</script>
-
+---
+import Asterisk from "components/Asterisk.astro"
+---
 <header class="header">
   <h1 class="header__title">
     Hi<span class="header__punctuation">!</span>
-    I'm Matt<span class="header__punctuation">.</span>
+    I&apos;m Matt<span class="header__punctuation">.</span>
   </h1>
-  <img src={asterisk} alt="Asterisk" class="header__asterisk" />
+  <Asterisk />
 </header>
 
-<!-- prettier-ignore -->
 <style lang="scss">
-  @use '../../styles/foundation/typography' as t;
-  @use '../../styles/foundation/breakpoints' as b;
+  @use '../styles/foundation/breakpoints' as b;
 
   .header {
     position: relative;
@@ -23,7 +20,7 @@
     &__title {
       position: absolute;
       padding: 0.67em 0 0 0.51em;
-      font-family: t.$mono;
+      font-family: var(--mono);
       font-size: 9.6em;
       font-style: italic;
       font-weight: 700;
@@ -33,14 +30,6 @@
     }
     &__punctuation {
       color: var(--pink);
-    }
-    &__asterisk {
-      position: absolute;
-      top: -3.8em;
-      right: -1em;
-      width: 29.5em;
-      color: var(--pink);
-      transform: rotate(-11.8deg);
     }
   }
 </style>

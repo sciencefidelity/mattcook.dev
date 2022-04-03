@@ -1,5 +1,5 @@
-# mattcook.dev
+# Welcome to eMpower
 
-> A work in progress
+A resource to help everyone improve their wellbeing, self‑esteem and mental health through meditation.
 
-Front end with [SvelteKit](https://kit.svelte.dev)
+The *Coming Soon* page build with [Astro](https://astro.build).
