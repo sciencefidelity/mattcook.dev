@@ -1,11 +1,11 @@
-import 'dotenv/config'
+import "dotenv/config"
 import { Client } from "@notionhq/client"
-import { groq } from "./lib.js"
+import { groq } from "./utils"
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN })
 const databaseId = process.env.NOTION_DATABASE_ID
-let paths = []
-let props = []
+// let paths = []
+// let props = []
 
 const pathQuery = await groq`
   *.properties{ "params": { "slug": slug.rich_text[0].plain_text } }
@@ -24,7 +24,7 @@ const pageQuery = await groq`{
   }
 }`
 
-const getPaths = async () => {
+export const getPaths = async () => {
   const payload = {
     path: `databases/${databaseId}/query`,
     method: "POST"
@@ -34,7 +34,7 @@ const getPaths = async () => {
   paths = await pathQuery(results)
 }
 
-const getProps = async () => {
+export const getProps = async () => {
   const payload = {
     path: `databases/${databaseId}/query`,
     method: "POST"
@@ -44,5 +44,5 @@ const getProps = async () => {
   props = await pageQuery(results)
 }
 
-getPaths().then(() => console.log(paths))
-getProps().then(() => console.log(props))
+// getPaths().then(() => console.log(paths))
+// getProps().then(() => console.log(props))

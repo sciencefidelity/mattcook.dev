@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { Client } from "@notionhq/client"
+import { groq } from "../lib/utils"
+
+interface Excerpt {
+  annotations: {
+    bold: boolean
+    italic: boolean
+    strikethrough: boolean
+    underline: boolean
+    code: boolean
+    color: string
+  }
+  href: string
+  plain_text: string
+  text: {
+    content: string
+    link: string
+  }
+  type: string
+}
+
+interface Post {
+  _id: string
+  author: string
+  excerpt: Excerpt[]
+  published: string
+  slug: string
+  status: string
+  tags: string[]
+  title: string[]
+}
+
+const notion = new Client({ auth: import.meta.env.NOTION_TOKEN })
+const databaseId = import.meta.env.NOTION_DATABASE_ID
+
+const query = await groq`{
+  "posts": *[] | order(properties.publishedAt.date.start desc){
+    "_id": id,
+    "author": properties.authors.relation[].id,
+    "excerpt": properties.excerpt.rich_text,
+    "published": properties.publishedAt.date.start,
+    "slug": properties.slug.rich_text[0].plain_text,
+    "status": properties.status.select.name,
+    "tags": properties.tags.multi_select[].name,
+    "title": properties.body.title[].plain_text
+  }
+}`
+
+const getProps = async () => {
+  const payload: any = {
+    path: `databases/${databaseId}/query`,
+    method: "POST"
+  }
+
+  const { results } = await notion.request(payload)
+  return query(results)
+}
+
+const response = await getProps()
+const { posts } = response as { posts: Post[] }
+---
+<Layout title="Welcome Home.">
+  <main>
+    <ul>
+      {posts.map(post =>
+        <li>
+          <p>{post.tags.join(", ")}</p>
+          <p>{post.published}</p>
+          <a href={`/posts/${post.slug}`}>{post.title.join("")}</a>
+          <p>{post.excerpt.map(excerpt => excerpt.plain_text).join("")}</p>
+        </li>
+      )}
+    </ul>
+  </main>
+</Layout>
