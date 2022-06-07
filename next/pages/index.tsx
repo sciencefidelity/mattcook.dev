@@ -1,33 +1,49 @@
 import type { GetStaticProps, NextPage } from "next"
 import Head from "next/head"
 import { Client } from "@notionhq/client"
+import dayjs from "dayjs"
+import { groq } from "../lib/utils"
+import { Post } from "../lib/interfaces"
 import u from "styles/utils.module.scss"
 
 interface Props {
-  posts: any
+  data: any
 }
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN })
 const databaseId: string = process.env.NOTION_DATABASE_ID
 
 export const getDatabase = async (databaseId: string) => {
+  const query = await groq`{
+    "posts": *[] | order(properties.publishedAt.date.start desc){
+      "_id": id,
+      "author": properties.authors.relation[].id,
+      "excerpt": properties.excerpt.rich_text,
+      "published": properties.publishedAt.date.start,
+      "slug": properties.slug.rich_text[0].plain_text,
+      "status": properties.status.select.name,
+      "tags": properties.tags.multi_select[].name,
+      "title": properties.body.title[].plain_text
+    }
+  }`
   const response = await notion.databases.query({
     database_id: databaseId,
   })
-  return response.results
+  return query(response.results)
 }
 
 export const getStaticProps: GetStaticProps = async () => {
   const database = await getDatabase(databaseId)
   return {
     props: {
-      posts: database
+      data: database
     },
     revalidate: 1
   }
 }
 
-const Home: NextPage<Props> = ({ posts }) => {
+const Home: NextPage<Props> = ({ data }) => {
+  const { posts } = data as { posts: Post[] }
   return (
     <>
       <Head>
@@ -36,8 +52,19 @@ const Home: NextPage<Props> = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${u.container}`}>
-        <pre>{JSON.stringify(posts, undefined, 2)}</pre>
-        {/* <pre>Hello</pre> */}
+        {/* <pre>{JSON.stringify(posts, undefined, 2)}</pre> */}
+        {/* <pre>{JSON.stringify(posts[0], undefined, 2)}</pre> */}
+        <ul>
+          {posts.map(post =>
+            <li>
+              <p>{post.tags.join(", ")}</p>
+              <p>{dayjs(new Date(post.published)).format("D MMMM YYYY")}</p>
+              {/* <p>{post.published}</p> */}
+              <a href={`/posts/${post.slug}`}>{post.title.join("")}</a>
+              <p>{post.excerpt.map(excerpt => excerpt.plain_text).join("")}</p>
+            </li>
+          )}
+        </ul>
       </div>
     </>
   )
