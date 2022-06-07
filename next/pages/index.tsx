@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const database = await getDatabase(databaseId)
   return {
     props: {
-      posts: database,
+      posts: database
     },
     revalidate: 1
   }
