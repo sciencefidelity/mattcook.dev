@@ -2,12 +2,15 @@ import type { GetStaticProps, NextPage } from "next"
 import Head from "next/head"
 import { Client } from "@notionhq/client"
 import dayjs from "dayjs"
-import { groq } from "../lib/utils"
-import { Post } from "../lib/interfaces"
+import { groq } from "lib/utils"
+import { LinkTo } from "components/linkTo"
+import { Post } from "lib/interfaces"
 import u from "styles/utils.module.scss"
 
 interface Props {
-  data: any
+  data: {
+    posts: Post[]
+  }
 }
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN })
@@ -43,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const Home: NextPage<Props> = ({ data }) => {
-  const { posts } = data as { posts: Post[] }
+  const { posts } = data
   return (
     <>
       <Head>
@@ -52,15 +55,12 @@ const Home: NextPage<Props> = ({ data }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${u.container}`}>
-        {/* <pre>{JSON.stringify(posts, undefined, 2)}</pre> */}
-        {/* <pre>{JSON.stringify(posts[0], undefined, 2)}</pre> */}
         <ul>
           {posts.map(post =>
             <li>
               <p>{post.tags.join(", ")}</p>
               <p>{dayjs(new Date(post.published)).format("D MMMM YYYY")}</p>
-              {/* <p>{post.published}</p> */}
-              <a href={`/posts/${post.slug}`}>{post.title.join("")}</a>
+              <LinkTo href={`/posts/${post._id}`}>{post.title.join("")}</LinkTo>
               <p>{post.excerpt.map(excerpt => excerpt.plain_text).join("")}</p>
             </li>
           )}
