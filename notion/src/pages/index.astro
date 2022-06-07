@@ -33,7 +33,6 @@ const getProps = async () => {
 
 const response = await getProps()
 const { posts } = response as { posts: Post[] }
-const json = JSON.stringify(posts, undefined, 2)
 ---
 <Layout title="Welcome Home.">
   <main>
