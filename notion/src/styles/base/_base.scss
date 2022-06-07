@@ -15,11 +15,27 @@ html {
 
 body {
   font-family: var(--sans);
+  color: #F1FA8C;
+  color: #8BE9FD;
+  font-size: 1.4rem;
 }
 
+a {
+  color: #BD93F9;
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+}
+
+.container,
 .astro-code {
   padding: 1rem;
-  // font-family: MonoLisa;
+}
+
+.list-item {
+  margin-bottom: 2rem;
 }
 
 code {

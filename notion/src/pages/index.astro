@@ -1,5 +1,4 @@
 ---
-import { Code } from "astro/components"
 import { Client } from "@notionhq/client"
 import { groq } from "../lib/utils"
 import { format } from "date-fns"
@@ -38,16 +37,17 @@ const json = JSON.stringify(posts, undefined, 2)
 ---
 <Layout title="Welcome Home.">
   <main>
-    <ul>
-      {posts.map(post =>
-        <li>
-          <p>{post.tags.join(", ")}</p>
-          <p>{format(new Date(post.published), "MMM do, yyyy")}</p>
-          <a href={`/posts/${post.slug}`}>{post.title.join("")}</a>
-          <p>{post.excerpt.map(excerpt => excerpt.plain_text).join("")}</p>
-        </li>
-      )}
-    </ul>
-    <Code code={json} lang="json" />
+    <div class="container">
+      <ul>
+        {posts.map(post =>
+          <li class="list-item">
+            <p>{post.tags.join(", ")}</p>
+            <p>{format(new Date(post.published), "MMM do, yyyy")}</p>
+            <a href={`/posts/${post.slug}`}>{post.title.join("")}</a>
+            <p>{post.excerpt.map(excerpt => excerpt.plain_text).join("")}</p>
+          </li>
+        )}
+      </ul>
+    </div>
   </main>
 </Layout>

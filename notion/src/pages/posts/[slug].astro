@@ -29,26 +29,31 @@ export async function getStaticPaths() {
     return query(results)
   }
 
-  const response = await getProps()
-  const { posts } = response as { posts: Post[] }
+  const response1 = await getProps()
+  const { posts } = response1 as { posts: Post[] }
 
-  return posts.map(post => {
+  return posts.map(async (post) => {
+    const response2 = await notion.pages.retrieve({ page_id: post._id })
+    // const { content } = response2 as any
+    console.log(response2)
     return {
       params: { slug: post.slug },
-      props: { post }
+      props: { post, content }
     }
   })
 }
 
-const { post } = Astro.props as { post: Post }
+const { post } = Astro.props as { post: Post, content: any }
 ---
 
 <Layout title="post">
   <main>
-    <p>{post.tags.join(", ").toUpperCase()}</p>
-    <h1>{post.title}</h1>
-    <time datetime={post.published}>
-      {format(new Date(post.published), "MMM do, yyyy")}
-    </time>
+    <div class="container">
+      <p>{post.tags.join(", ").toUpperCase()}</p>
+      <h1>{post.title}</h1>
+      <time datetime={post.published}>
+        {format(new Date(post.published), "MMM do, yyyy")}
+      </time>
+    </div>
   </main>
 </Layout>
