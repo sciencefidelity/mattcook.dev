@@ -6,19 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "concurrently 'yarn:lint:*'",
+    "lint:js": "eslint '**/*.{ts,js,tsx,jsx}'",
+    "lint:format": "prettier --check '**/*.{ts,js,tsx,jsx,json,md,yml}'",
+    "fix": "concurrently 'yarn:fix:*'",
+    "fix:js": "eslint --fix '**/*.{ts,js}'",
+    "fix:format": "prettier --write '**/*.{ts,js,tsx,jsx,json,md,yml}'"
   },
   "dependencies": {
+    "@notionhq/client": "^1.0.4",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "sass": "^1.52.2"
   },
   "devDependencies": {
     "@types/node": "17.0.41",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
-    "eslint": "8.17.0",
+    "concurrently": "^7.2.1",
+    "eslint": "^8.17.0",
     "eslint-config-next": "12.1.6",
+    "prettier": "^2.6.2",
     "typescript": "4.7.3"
   }
 }
