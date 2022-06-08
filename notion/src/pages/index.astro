@@ -22,13 +22,10 @@ const query = await groq`{
 }`
 
 const getProps = async () => {
-  const payload: any = {
-    path: `databases/${databaseId}/query`,
-    method: "POST"
-  }
-
-  const { results } = await notion.request(payload)
-  return query(results)
+  const response = await notion.databases.query({
+    database_id: databaseId,
+  })
+  return query(response.results)
 }
 
 const response = await getProps()
