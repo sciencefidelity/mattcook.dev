@@ -1,9 +1,9 @@
 ---
 import { Client } from "@notionhq/client"
-import { groq } from "../../lib/utils"
-import { format } from "date-fns"
+// import { groq } from "../../lib/utils"
+// import { format } from "date-fns"
 import Layout from "../../layouts/Layout.astro"
-import { Post } from "../../lib/interfaces"
+// import { Post } from "../../lib/interfaces"
 
 export async function getStaticPaths() {
   const notion = new Client({ auth: import.meta.env.NOTION_TOKEN })
@@ -11,6 +11,7 @@ export async function getStaticPaths() {
   const data = await notion.databases.query({
     database_id: databaseId
   })
+  console.log(data)
   return await Promise.all(data.results.map(async (result) => {
     const post = await notion.pages.retrieve({
       page_id: result.id
