@@ -1,38 +1,50 @@
 ---
 import { Client } from "@notionhq/client"
-import { groq } from "../../lib/utils"
-// import { format } from "date-fns"
+// import { groq } from "../../lib/utils"
+import { format } from "date-fns"
 import Layout from "../../layouts/Layout.astro"
 // import { Post } from "../../lib/interfaces"
 
 export async function getStaticPaths() {
-  const query = await groq`{
-    "post": *
-  }`
+  // const query = await groq`*`
   const notion = new Client({ auth: import.meta.env.NOTION_TOKEN })
   const databaseId = import.meta.env.NOTION_DATABASE_ID
   const data = await notion.databases.query({
     database_id: databaseId
   })
   return await Promise.all(data.results.map(async (result) => {
-    const response = await notion.pages.retrieve({
+    const post = await notion.pages.retrieve({
       page_id: result.id
     })
-    const post = await query(response)
-    console.log(post)
+    const author = await notion.pages.retrieve({
+      page_id: result.properties.authors.relation[0].id
+    })
+    // const post = await query(response)
     return {
       params: { slug: result.properties.slug.rich_text[0].plain_text },
-      props: post
+      props: {
+        author: author.properties.Name.title[0].text.content,
+        body: post.properties,
+        post,
+        publishedAt: post.properties.publishedAt.date.start,
+        tags: post.properties.tags.multi_select,
+        title: post.properties.body.title
+      }
     }
   }))
 }
-const { post } = Astro.props
+const { author, body, post, publishedAt, tags, title } = Astro.props
 ---
 
 <Layout title="post">
   <main>
     <div class="container">
-      <!-- <h1>{post.properties.body.title.map(e => e.plain_text).join(" ")}</h1> -->
+      <h1>{title.map(e => e.plain_text).join(" ")}</h1>
+      <p>{tags.map(tag => tag.name).join(", ")}</p>
+      <p>By: {author}</p>
+      <time datetime={publishedAt}>
+        Published on: {format(new Date(publishedAt), "eeee do MMMM")}
+      </time>
       <pre>{JSON.stringify(post, undefined, 2)}</pre>
     </div>
   </main>
