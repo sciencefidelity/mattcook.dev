@@ -1,24 +1,28 @@
 ---
 import { Client } from "@notionhq/client"
-// import { groq } from "../../lib/utils"
+import { groq } from "../../lib/utils"
 // import { format } from "date-fns"
 import Layout from "../../layouts/Layout.astro"
 // import { Post } from "../../lib/interfaces"
 
 export async function getStaticPaths() {
+  const query = await groq`{
+    "post": *
+  }`
   const notion = new Client({ auth: import.meta.env.NOTION_TOKEN })
   const databaseId = import.meta.env.NOTION_DATABASE_ID
   const data = await notion.databases.query({
     database_id: databaseId
   })
-  console.log(data)
   return await Promise.all(data.results.map(async (result) => {
-    const post = await notion.pages.retrieve({
+    const response = await notion.pages.retrieve({
       page_id: result.id
     })
+    const post = await query(response)
+    console.log(post)
     return {
       params: { slug: result.properties.slug.rich_text[0].plain_text },
-      props: { post }
+      props: post
     }
   }))
 }
@@ -28,8 +32,8 @@ const { post } = Astro.props
 <Layout title="post">
   <main>
     <div class="container">
-      <h1>{post.properties.body.title.map(e => e.plain_text).join(" ")}</h1>
-      <!-- <pre>{JSON.stringify(post, undefined, 2)}</pre> -->
+      <!-- <h1>{post.properties.body.title.map(e => e.plain_text).join(" ")}</h1> -->
+      <pre>{JSON.stringify(post, undefined, 2)}</pre>
     </div>
   </main>
 </Layout>
