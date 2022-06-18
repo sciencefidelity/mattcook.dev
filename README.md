@@ -2,4 +2,4 @@
 
 This is my dev portfolio. It's still a work in progress.
 
-Made with [SvelteKit](https://kit.svelte.dev) and [Sanity](https://sanity.io).
+Made with [Astro](https://astro.build) and [Sanity](https://sanity.io).
