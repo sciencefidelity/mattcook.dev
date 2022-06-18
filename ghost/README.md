@@ -1,3 +1,3 @@
 # Ghost
 
-Blog with [Ghost](https://ghost.org/). Hosted on [Railway](https://railway.app/button.svg).
+Headless CMS with [Ghost](https://ghost.org/). Hosted on [Railway](https://railway.app/button.svg).
