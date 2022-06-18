@@ -1,0 +1,22 @@
+{
+  "name": "ghost",
+  "version": "5.2.3",
+  "description": "A ghost CMS",
+  "main": "index.js",
+  "author": "Matt Cook <matt@sciencefidelity.co.uk>",
+  "license": "MIT",
+  "engines": {
+    "node": "16.X"
+  },
+  "dependencies": {
+    "casper": "github:TryGhost/Casper#main",
+    "ghost": "5.2.3",
+    "ghost-storage-cloudinary": "2.2.3",
+    "themes": "github:TryGhost/Themes#main",
+    "lyra": "github:TryGhost/lyra#main"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "bash bin/cloudinary.sh && bash bin/themes.sh"
+  }
+}
