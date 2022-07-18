@@ -1,6 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import sanityClient from "lib/sanityClient";
+import sanityClient from "lib/sanity-client";
 
 /**
  * Returns the image url for the given image object
