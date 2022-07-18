@@ -1,48 +1,34 @@
 {
-  "name": "mattcook.dev",
-  "description": "Matt Cook – Artist, digital creative, developer",
+  "name": "matt-cook",
   "private": true,
-  "version": "0.1.0",
-  "author": "Matt Cook <matt@sciencefidelity.co.uk>",
-  "license": "UNLICENCED",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:sciencefidelity/mattcook.git"
-  },
-  "homepage": "https://mattcook.dev",
-  "keywords": [
-    "sanity",
-    "svelte"
-  ],
+  "version": "1.0.0",
+  "main": "package.json",
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity start --host=0.0.0.0",
-    "build": "sanity build",
-    "format": "prettier --write '**/*.{ts,js,json,md,yml}'"
+    "dev": "sanity start",
+    "start": "sanity start",
+    "build": "sanity build"
   },
-  "yarn-upgrade-all": {
-    "ignore": [
-      "@sanity/base",
-      "@sanity/core",
-      "@sanity/default-layout",
-      "@sanity/default-login",
-      "@sanity/desk-tool",
-      "@sanity/vision",
-      "react",
-      "react-dom"
-    ]
-  },
+  "keywords": [
+    "sanity"
+  ],
   "dependencies": {
-    "@sanity/base": "^2.30.1",
-    "@sanity/core": "^2.30.2",
-    "@sanity/default-layout": "^2.30.1",
-    "@sanity/default-login": "^2.30.1",
-    "@sanity/desk-tool": "^2.30.1",
-    "@sanity/vision": "^2.30.1",
-    "prettier": "^2.6.2",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sanity-plugin-markdown": "^2.1.1",
-    "styled-components": "^5.3.5"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-is": "^17.0.0",
+    "sanity": "dev-preview",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^2.0.0",
+    "eslint": "^8.6.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
   }
 }
