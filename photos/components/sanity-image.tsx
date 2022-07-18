@@ -17,15 +17,12 @@ interface Props {
 
 export function SanityImageComponent({ idx, image, imagesPerPage }: Props) {
   const [loaded, setLoaded] = useState(false)
-  const onLoad = useCallback(() => {
-    console.log("callback called")
+  const handleOnLoad = useCallback(() => {
     setLoaded(true)
   }, [])
   useEffect(() => {
-    console.log("effect called")
     setLoaded(true)
-  }, [loaded, onLoad])
-  console.log("component rendered")
+  }, [loaded, handleOnLoad])
   return (
     <div
       key={image._key}
@@ -44,15 +41,11 @@ export function SanityImageComponent({ idx, image, imagesPerPage }: Props) {
           width={400}
           height={400}
           className={s.image}
-          onLoad={onLoad}
+          onLoad={handleOnLoad}
           loading="lazy"
         />
       </div>
-      <div
-        className={`${s.fallbackContainer}  ${
-          loaded && idx < imagesPerPage ? s.loaded : ""
-        }`}
-      >
+      <div className={`${s.fallbackContainer}  ${loaded ? s.loaded : ""}`}>
         <img
           key={image._key}
           src={urlFor(image.image)
