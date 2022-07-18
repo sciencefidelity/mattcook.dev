@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "binfz6bl",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "Matt Cook"
+  }
+}

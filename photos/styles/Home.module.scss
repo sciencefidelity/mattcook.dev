@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  place-items: center;
+  margin: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
