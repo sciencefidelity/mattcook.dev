@@ -15,7 +15,7 @@ const Home: NextPage = () => (
       <link rel="mask-icon" href="/mask-icon.svg" color="#00B5DD" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
     </Head>
-    <header>
+    <header className={`${s.relative} ${s.header}`}>
       <svg
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
@@ -29,15 +29,34 @@ const Home: NextPage = () => (
       </svg>
       <div className={`${u.grid} ${s.container}`}>
         <div>
-          <h1 className={s.logo}>
-            <em>Matt Cook</em>
-          </h1>
-          <h2 className={s.subheading}>
+          <p className={s.intro}>Hi, my name is</p>
+          <h1 className={s.logo}>Matt Cook.</h1>
+          <h2 className={s.subheading}>I build things for the modern web.</h2>
+          {/* <h2 className={s.subheading}>
             Front End Engineer <span className={u.blue}>|</span> React{" "}
             <span className={u.blue}>|</span> TypeScript
-          </h2>
+          </h2> */}
+          <button type="button" className={s.btn}>
+            Get in touch
+          </button>
         </div>
       </div>
+      <nav>
+        <div className={s.nav}>
+          <a href="#about">
+            <span className={`${u.blue} ${s.number}`}>01.</span> About
+          </a>{" "}
+          <a href="#experience">
+            <span className={`${u.blue} ${s.number}`}>02.</span> Experience
+          </a>{" "}
+          <a href="#work">
+            <span className={`${u.blue} ${s.number}`}>03.</span> Work
+          </a>{" "}
+          <a href="#contact">
+            <span className={`${u.blue} ${s.number}`}>04.</span> Contact
+          </a>
+        </div>
+      </nav>
     </header>
   </div>
 )

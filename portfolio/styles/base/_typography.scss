@@ -27,3 +27,48 @@
   src: url('/fonts/spacemono-bolditalic.woff2') format('woff2');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Apercu Pro';
+  font-weight: 400;
+  src: url('/fonts/apercupro-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/apercupro-italic.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  font-weight: 700;
+  src: url('/fonts/apercupro-bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/apercupro-bolditalic.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt Pressura Mono';
+  font-weight: 400;
+  src: url('/fonts/gtpressuramono-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gt Pressura Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/gtpressuramono-italic.woff2') format('woff2');
+  font-display: swap;
+}

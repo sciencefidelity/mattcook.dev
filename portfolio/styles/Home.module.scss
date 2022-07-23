@@ -3,7 +3,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 94%;
 }
 
 .asterisk {
@@ -13,18 +13,53 @@
   top: -5rem;
 }
 
+.intro {
+  line-height: 2;
+  font-family: 'Gt Pressura', monospace;
+  font-size: 1.6rem;
+}
+
 .logo {
   font-family: 'Space Mono', monospace;
   font-size: 7rem;
   color: #00B5DD;
   font-weight: 700;
   line-height: 1.4;
+  font-style: italic;
 }
 
 .subheading {
-  text-align: right;
-  text-transform: uppercase;
-  font-size: 1.7rem;
+  font-family: 'Gt Pressura', serif;
+  // font-weight: 700;
+  // text-align: right;
+  // text-transform: uppercase;
+  font-size: 1.8rem;
 }
 
+.nav {
+  font-family: 'Gt pressura Mono', monospace;
+  font-size: 1.6rem;
+  text-align: center;
+  a {
+    color: var(--grey-850);
+    text-decoration: none;
+    &:hover {
+      color: #00B5DD;
+    }
+  }
+}
 
+.number {
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-family: 'Gt Pressura', serif;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  background-color: white;
+  border: 2px solid #00B5DD;
+  color: #00B5DD;
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+}
