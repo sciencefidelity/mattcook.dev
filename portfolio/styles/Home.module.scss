@@ -9,8 +9,8 @@
 .asterisk {
   width: 30rem;
   position: absolute;
-  right: -5rem;
-  top: -5rem;
+  left: -5rem;
+  top: -6rem;
 }
 
 .intro {
@@ -24,7 +24,7 @@
   font-size: 7rem;
   color: #00B5DD;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
   font-style: italic;
 }
 
@@ -37,11 +37,14 @@
 }
 
 .nav {
+  margin-top: 0.7rem;
+  margin-right: 2rem;
   font-family: 'Gt pressura Mono', monospace;
   font-size: 1.6rem;
-  text-align: center;
+  display: grid;
+  justify-content: end;
   a {
-    color: var(--grey-850);
+    color: var(--grey-750);
     text-decoration: none;
     &:hover {
       color: #00B5DD;
@@ -49,17 +52,40 @@
   }
 }
 
-.number {
-  font-size: 1.2rem;
-}
-
 .btn {
   font-family: 'Gt Pressura', serif;
   padding: 1rem 1.5rem;
   font-size: 1.4rem;
-  background-color: white;
+  background-color: transparent;
   border: 2px solid #00B5DD;
   color: #00B5DD;
-  margin-top: 2rem;
+  margin-top: 3rem;
   border-radius: 0.3rem;
+}
+
+.btnResume {
+  font-family: 'Gt Pressura', serif;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.4rem;
+  background-color: transparent;
+  border: 2px solid #00B5DD;
+  color: #00B5DD;
+  border-radius: 0.3rem;
+}
+
+.navList {
+  font-family: 'Gt Pressura', serif;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  li {
+    line-height: 2.3;
+    padding-block: 0.7rem;
+    font-size: 1.4rem;
+  }
+}
+
+.number {
+  font-family: 'Gt pressura Mono', monospace;
+  font-size: 1.2rem;
 }

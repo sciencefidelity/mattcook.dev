@@ -16,6 +16,37 @@ const Home: NextPage = () => (
       <link rel="preconnect" href="https://fonts.googleapis.com" />
     </Head>
     <header className={`${s.relative} ${s.header}`}>
+      <nav>
+        <div className={s.nav}>
+          <ul className={s.navList}>
+            <li>
+              <a href="#about">
+                <span className={`${u.blue} ${s.number}`}>01.</span> About
+              </a>
+            </li>
+            <li>
+              <a href="#experience">
+                <span className={`${u.blue} ${s.number}`}>02.</span> Experience
+              </a>
+            </li>
+            <li>
+              <a href="#work">
+                <span className={`${u.blue} ${s.number}`}>03.</span> Work
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <span className={`${u.blue} ${s.number}`}>04.</span> Contact
+              </a>
+            </li>
+            <li>
+              <button type="button" className={`${s.btnResume}`}>
+                CV
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <svg
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,22 +72,6 @@ const Home: NextPage = () => (
           </button>
         </div>
       </div>
-      <nav>
-        <div className={s.nav}>
-          <a href="#about">
-            <span className={`${u.blue} ${s.number}`}>01.</span> About
-          </a>{" "}
-          <a href="#experience">
-            <span className={`${u.blue} ${s.number}`}>02.</span> Experience
-          </a>{" "}
-          <a href="#work">
-            <span className={`${u.blue} ${s.number}`}>03.</span> Work
-          </a>{" "}
-          <a href="#contact">
-            <span className={`${u.blue} ${s.number}`}>04.</span> Contact
-          </a>
-        </div>
-      </nav>
     </header>
   </div>
 )

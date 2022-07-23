@@ -15,8 +15,12 @@ body {
   overflow-x: hidden;
 }
 
-nav {
-  font-family: 'Gt Pressura Mono', monospace;
-  font-size: 1.6rem;
-}
-
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: #04090e;
+//   }
+// }
