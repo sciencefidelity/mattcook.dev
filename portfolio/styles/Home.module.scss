@@ -17,6 +17,7 @@
   line-height: 2;
   font-family: 'Gt Pressura', monospace;
   font-size: 1.6rem;
+  color: var(--grey-850);
 }
 
 .logo {
@@ -61,6 +62,7 @@
   color: #00B5DD;
   margin-top: 3rem;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 
 .btnResume {
@@ -71,6 +73,7 @@
   border: 2px solid #00B5DD;
   color: #00B5DD;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 
 .navList {
@@ -88,4 +91,116 @@
 .number {
   font-family: 'Gt pressura Mono', monospace;
   font-size: 1.2rem;
+}
+
+.email {
+  font-family: 'Gt pressura Mono', monospace;
+  position: fixed;
+  bottom: 12rem;
+  right: -2rem;
+  transform: rotate(90deg);
+  font-size: 1.3rem;
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    font-size: 1.2rem;
+    width: 13rem;
+    height: 0.15rem;
+    background-color: #00B5DD;
+    bottom: 0.5rem;
+    left: 14rem;
+  }
+  a {
+    color: #00B5DD;
+    text-decoration: none;
+    &:hover {
+      color: #00B5DD;
+    }
+  }
+}
+
+.links {
+  font-family: 'Gt pressura Mono', monospace;
+  position: fixed;
+  bottom: 11rem;
+  left: 0.8rem;
+  transform: rotate(90deg);
+  font-size: 1.3rem;
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    font-size: 1.2rem;
+    width: 13rem;
+    height: 0.15rem;
+    background-color: #00B5DD;
+    bottom: 0.5rem;
+    left: 11rem;
+  }
+  a {
+    color: #00B5DD;
+    text-decoration: none;
+    &:hover {
+      color: #00B5DD;
+    }
+  }
+}
+
+.icon {
+  width: 1.7rem;
+  transform: rotate(-90deg);
+}
+
+.dot {
+  // color: var(--grey-750);
+  color: #EA3546;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 0 1.8rem;
+  li {
+    font-size: 1.4rem;
+    &:hover {
+      color: #00B5DD;
+    }
+  }
+}
+
+.sectionHeading {
+  font-family: 'Gt Pressura', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about {
+  width: 700px;
+  margin-bottom: 7rem;
+}
+
+.skillsList {
+  width: 500px;
+  margin-top: 1.7rem;
+  font-family: 'Gt pressura Mono', monospace;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  color: var(--grey-650);
+  position: relative;
+  li {
+    position: relative;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: -2rem;
+      color: #00B5DD;
+      line-height: 0.7;
+      font-size: 1.7rem;
+    }
+  }
 }
