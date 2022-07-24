@@ -1,5 +1,5 @@
 import { Asterisk } from "components/icon"
-import { menu } from "lib/data"
+import { sections } from "lib/data"
 import s from "styles/Home.module.scss"
 import u from "styles/Utils.module.scss"
 
@@ -9,11 +9,13 @@ export function Header() {
       <nav>
         <div className={s.nav}>
           <ul className={s.navList}>
-            {menu.map((item, idx) => (
-              <li>
-                <a href={`#${item.toLowerCase()}`}>
-                  <span className={`${u.blue} ${s.number}`}>0{idx + 1}.</span>{" "}
-                  {item}
+            {sections.map((section) => (
+              <li key={section.id}>
+                <a href={`#${section.menu.toLowerCase()}`}>
+                  <span className={`${u.blue} ${s.number}`}>
+                    0{section.id}.
+                  </span>{" "}
+                  {section.menu}
                 </a>
               </li>
             ))}
