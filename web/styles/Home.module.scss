@@ -1,0 +1,502 @@
+@use 'base/breakpoints' as b;
+
+.header {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  max-width: 90%;
+  margin-inline: auto;
+  @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(lg) {
+    height: 94%;
+    max-width: 90%;
+  }
+}
+
+.asterisk {
+  width: 13rem;
+  position: absolute;
+  left: -2rem;
+  top: -3rem;
+  @include b.mq(sm) {
+    left: -5rem;
+    top: -6rem;
+    width: 20rem;
+  }
+  @include b.mq(md) {
+    left: -3rem;
+    top: -7rem;
+    width: 20rem;
+  }
+  @include b.mq(lg) {
+    left: -5rem;
+    top: -8rem;
+    width: 25rem;
+  }
+  @include b.mq(xl) {
+    left: -7rem;
+    top: -8rem;
+    width: 28rem;
+  }
+}
+
+.intro {
+  line-height: 0;
+  font-family: 'Gt Pressura', monospace;
+  font-size: 1.4rem;
+  color: var(--grey-850);
+  @include b.mq(sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.logo {
+  font-family: 'Space Mono', monospace;
+  color: #00B5DD;
+  font-weight: 700;
+  line-height: 1.2;
+  font-style: italic;
+  font-size: 14.7vw;
+  @include b.mq(sm) {
+    font-size: 4.3rem;
+  }
+  @include b.mq(md) {
+    font-size: 5.7rem;
+  }
+  @include b.mq(lg) {
+    font-size: 7rem;
+  }
+}
+
+.subheading {
+  font-family: 'Gt Pressura', serif;
+  font-size: 1.4rem;
+  @include b.mq(sm) {
+    font-size: 1.6em;
+  }
+  @include b.mq(md) {
+    font-size: 1.8rem;
+  }
+}
+
+.nav {
+  display: grid;
+  margin-top: 0.7rem;
+  margin-right: 2rem;
+  font-family: 'Gt pressura Mono', monospace;
+  font-size: 1.6rem;
+  justify-content: end;
+  a {
+    color: var(--grey-750);
+    text-decoration: none;
+    &:hover {
+      color: #00B5DD;
+    }
+  }
+}
+
+.navList {
+  text-align: right;
+  position: absolute;
+  font-family: 'Gt Pressura', serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  right: 1.2rem;
+  @include b.mq(sm) {
+  }
+  @include b.mq(md) {
+    right: 2rem;
+  }
+  @include b.mq(lg) {
+    text-align: unset;
+    position: unset;
+    gap: 3rem;
+    flex-direction: row;
+  }
+  li {
+    line-height: 1;
+    padding-block: 0.7rem;
+    font-size: 1.3rem;
+    @include b.mq(sm) {
+      font-size: 1.4rem;
+      line-height: 1.6;
+    }
+    @include b.mq(lg) {
+      line-height: 2.3;
+    }
+  }
+}
+
+.btn {
+  font-family: 'Gt Pressura', serif;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: 2px solid #00B5DD;
+  color: #00B5DD;
+  margin-top: 3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  @include b.mq(sm) {
+    font-size: 1.4rem;
+  }
+  &:hover {
+    background-color: hsl(191, 63%, 93%);
+  }
+}
+
+.btnResume {
+  padding: 0.7rem 1.5rem;
+  margin-top: unset;
+}
+
+.number {
+  font-family: 'Gt pressura Mono', monospace;
+  font-size: 1.2rem;
+}
+
+.email,
+.links {
+  display: none;
+  font-family: 'Gt pressura Mono', monospace;
+  position: fixed;
+  transform: rotate(90deg);
+  font-size: 1.3rem;
+  @include b.mq(sm) {
+    display: unset;
+  }
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    font-size: 1.2rem;
+    width: 13rem;
+    height: 0.15rem;
+    background-color: #00B5DD;
+    bottom: 0.5rem;
+  }
+  a {
+    color: #00B5DD;
+    text-decoration: none;
+    &:hover {
+      color: #00B5DD;
+    }
+  }
+}
+
+.email {
+  bottom: 12rem;
+  right: -4.2rem;
+  @include b.mq(md) {
+    right: -3.1rem;
+  }
+  @include b.mq(lg) {
+    right: -2rem;
+  }
+  &::after {
+    left: 14rem;
+  }
+}
+
+.links {
+  bottom: 11rem;
+  left: -1.8rem;
+  @include b.mq(md) {
+    left: -0.5rem;
+  }
+  @include b.mq(lg) {
+    left: 0.8rem;
+  }
+  &::after {
+    left: 11rem;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 0 1.8rem;
+  li {
+    font-size: 1.4rem;
+    &:hover {
+      color: #00B5DD;
+    }
+  }
+}
+
+.icon {
+  width: 1.7rem;
+  transform: rotate(-90deg);
+}
+
+.dot {
+  color: #EA3546;
+}
+
+.sectionHeading {
+  font-family: 'Gt Pressura', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about {
+  padding-top: 9rem;
+  width: 700px;
+  max-width: 90%;
+  margin-bottom: 7rem;
+  margin-inline: auto;
+  @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(lg) {
+    max-width: 90%;
+    padding-top: 11rem;
+    margin-bottom: 9rem;
+  }
+  @include b.mq(xl) {
+    max-width: 90%;
+    padding-top: 9rem;
+    margin-bottom: 7rem;
+  }
+}
+
+.skillsList {
+  width: unset;
+  margin-top: 1.7rem;
+  font-family: 'Gt pressura Mono', monospace;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  color: var(--grey-650);
+  position: relative;
+  @include b.mq(sm) {
+    width: 500px;
+  }
+  li {
+    position: relative;
+    font-size: 1.15rem;
+    margin-left: 2rem;
+    @include b.mq(sm) {
+      font-size: 1.2rem;
+    }
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: -2rem;
+      color: #00B5DD;
+      line-height: 0.7;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.contact {
+  padding-top: 9rem;
+  width: 700px;
+  max-width: 90%;
+  text-align: center;
+  margin-bottom: 15rem;
+  margin-inline: auto;
+  @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(lg) {
+    max-width: 90%;
+  }
+  h3 {
+    font-family: 'Gt Pressura', serif;
+    font-size: 3.4rem;
+    line-height: 0.4;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    @include b.mq(sm) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.work {
+  padding-top: 4rem;
+  max-width: 90%;
+  margin-inline: auto;
+  @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(lg) {
+    max-width: 68%;
+  }
+  @include b.mq(xl) {
+    max-width: 90%;
+    padding-top: 9rem;
+  }
+  h2 {
+    margin-bottom: 4rem;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 5rem;
+  @include b.mq(xl) {
+    margin-bottom: 9rem;
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+.featured {
+  font-family: 'Gt Pressura Mono', monospace;
+  color: #00B5DD;
+  font-size: 1.1rem;
+  margin: unset;
+  margin-bottom: 0.6rem;
+  @include b.mq(lg) {
+    font-size: 1.3rem;
+  }
+  @include b.mq(xl) {
+    font-size: 1rem;
+  }
+}
+
+.projectTitle {
+  font-family: 'Gt Pressura Mono', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+  @include b.mq(sm) {
+    font-size: 1.9rem;
+  }
+  @include b.mq(lg) {
+    font-size: 2rem;
+  }
+  @include b.mq(xl) {
+    font-size: 1.5rem;
+  }
+}
+
+
+.body {
+  background-color: #C6EAF2;
+  font-size: 1.15rem;
+  color: var(--grey-850);
+  margin-bottom: 0;
+  padding: 1.7rem 1.7rem 1.7rem 1.7rem;
+  border: 1px solid #C6EAF2;
+  @include b.mq(lg) {
+    font-size: 1.45rem;
+    padding: 2rem 2rem 2rem 2rem;
+    border: 0;
+  }
+  @include b.mq(xl) {
+    padding: 1.5rem 2rem 1.7rem 2rem;
+    font-size: 1.2rem;
+    border: 0;
+  }
+}
+
+.stack {
+  font-family: 'Gt Pressura Mono', monospace;
+  display: flex;
+  gap: 0.5rem 1.5rem;
+  color: var(--grey-600);
+  flex-wrap: wrap;
+  font-size: unset;
+  @include b.mq(lg) {
+    font-size: 1.15rem;
+  }
+  @include b.mq(xl) {
+    font-size: 0.9rem;
+    gap: 1.5rem;
+  }
+}
+
+.screenshot {
+  display: none;
+  position: relative;
+  aspect-ratio: 5/3;
+  @include b.mq(xl) {
+    display: unset;
+  }
+  & > span {
+    border: 1px solid #00B5DD !important;
+    @include b.mq(md) {
+      position: absolute;
+      left: -1rem;
+      box-shadow: 1rem 1rem #00B5DD;
+    }
+  }
+}
+
+.screenshotSmall {
+  display: block;
+  margin-bottom: -0.3rem;
+  position: relative;
+  aspect-ratio: 5/3;
+  @include b.mq(xl) {
+    display: none;
+  }
+  & > span {
+    border: 2px solid #C6EAF2 !important;
+  }
+}
+
+.workLinks {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.3rem;
+  gap: 0.9rem;
+  justify-content: end;
+  @include b.mq(xl) {
+    justify-content: unset;
+  }
+}
+
+.workIcon {
+  width: 1.7rem;
+  color: #00B5DD;
+}
+
+.reverse {
+  @include b.mq(xl) {
+    text-align: right;
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .body {
+    @include b.mq(xl) {
+      padding: 1.5rem 2rem 1.7rem 2rem;
+    }
+  }
+  .stack,
+  .workLinks {
+    @include b.mq(xl) {
+      justify-content: end;
+    }
+  }
+  div:first-child {
+    @include b.mq(xl) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+  .under {
+    @include b.mq(xl) {
+      top: 0.75rem;
+      left: -1rem;
+    }
+  }
+  .screenshot {
+    & > span {
+      @include b.mq(xl) {
+        left: 1rem;
+        box-shadow: -1rem 1rem #00B5DD;
+      }
+    }
+  }
+}

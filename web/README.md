@@ -1,5 +1,3 @@
-# Welcome to eMpower
+# mattcook.dev
 
-A resource to help everyone improve their wellbeing, self‑esteem and mental health through meditation.
-
-The *Coming Soon* page build with [Astro](https://astro.build).
+The current incarnation of my portfolio site uses (Next.js)[https://nextjs.org] on the front end and (Sanity)[https://sanity.io] to manage the content.
