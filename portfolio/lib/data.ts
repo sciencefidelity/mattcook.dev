@@ -1,3 +1,7 @@
+import mwaScreenshot from "public/images/mwa-home-desktop.jpg";
+import naenScreenshot from "public/images/naen-home-desktop.jpg";
+import knappScreenshot from "public/images/knapp-home-desktop.jpg";
+
 export const menu = ["About", "Experience", "Work", "Contact"];
 
 export const sections = [
@@ -54,23 +58,23 @@ export const work = [
     stack: ["React", "TypeScript", "Next.js", "Sanity", "GROQ", "Sass"],
     url: "https://midwalesarts.org.uk",
     repo: "https://github.com/sciencefidelity/midwalesarts.org.uk",
-    image: "mwa-home-desktop.jpg",
+    image: mwaScreenshot,
   },
   {
     title: "National Arts & Education Network",
-    body: "Multilingual static site for a national education training provider. Includes a platform for course documentation and videos, events. Sanity Studio includes custom implemenations of a newsletter builder and Eventbrite connection to the Eventbrite API.",
-    stack: ["React", "TypeScript", "Remix", "Eventbrite API", "Mailchimp API"],
+    body: "Site for a national education training provider. Includes a platform for course documentation and videos, events. Sanity Studio includes custom implemenations of a newsletter builder and Eventbrite connection to the Eventbrite API.",
+    stack: ["React", "TypeScript", "Remix", "Eventbrite API", "Mapbox"],
     url: "https://artsed.wales",
     repo: "https://github.com/sciencefidelity/artsed.wales",
-    image: "naen-home-desktop.jpg",
+    image: naenScreenshot,
   },
   {
     title: "The Estate of Stefan Knapp",
     body: "Multilingual static site for the centenery of the famous Polish and British artist Stefan Knapp. The site is built with Astro and Vue and includes a custom SSG solution built with Vite. The site data is published in Sanity Studio and queried with GROQ.",
-    stack: ["Vue", "Astro", "TypeScript", "Vite", "Sanity", "Sass"],
+    stack: ["Vue", "Astro", "TypeScript", "Vite", "Sanity", "GROQ", "Sass"],
     url: "https://stefanknapp.art",
     repo: "https://github.com/sciencefidelity/stefanknapp.art",
-    image: "knapp-home-desktop-2.jpg",
+    image: knappScreenshot,
   },
 ];
 

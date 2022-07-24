@@ -201,3 +201,106 @@
   }
 }
 
+.work {
+  h2 {
+    margin-bottom: 4rem;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  margin-bottom: 9rem;
+}
+
+.featured {
+  font-family: 'Gt Pressura Mono', monospace;
+  color: #00B5DD;
+  font-size: 1.1rem;
+  margin: unset;
+  margin-bottom: 0.6rem;
+}
+
+.projectTitle {
+  font-family: 'Gt Pressura Mono', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+
+
+.body {
+  background-color: #C6EAF2;
+  font-size: 1.2rem;
+  padding: 2rem 3rem 2rem 2rem;
+  color: var(--grey-850);
+  margin-bottom: 0;
+}
+
+.stack {
+  font-family: 'Gt Pressura Mono', monospace;
+  display: flex;
+  gap: 1.5rem;
+  color: var(--grey-600);
+}
+
+.screenshot {
+  position: relative;
+  aspect-ratio: 5/3;
+  & > span {
+    position: absolute;
+    left: -1rem;
+    border: 1px solid #00B5DD !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 1rem 1rem #00B5DD;
+  }
+}
+
+.workLinks {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.3rem;
+  gap: 0.9rem;
+}
+
+.workIcon {
+  width: 1.7rem;
+  color: #00B5DD;
+}
+
+// .under {
+//   width: 100%;
+//   height: 100%;
+//   background-color: #00B5DD;
+//   position: absolute;
+//   top: 0.75rem;
+//   left: 1rem;
+// }
+
+.reverse {
+  text-align: right;
+  grid-template-columns: 1.1fr 1fr;
+  .body {
+    padding: 2rem 2rem 2rem 3rem;
+  }
+  .stack,
+  .workLinks {
+    justify-content: end;
+  }
+  div:first-child {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .under {
+    top: 0.75rem;
+    left: -1rem;
+  }
+  .screenshot {
+    & > span {
+      left: 1rem;
+      box-shadow: -1rem 1rem #00B5DD;
+    }
+  }
+}

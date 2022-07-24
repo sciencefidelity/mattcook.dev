@@ -1,4 +1,6 @@
-import { sections, skills } from "lib/data"
+import Image from "next/image"
+import { sections, skills, work } from "lib/data"
+import { GitHubWork, ExternalLink } from "components/icon"
 import s from "styles/Home.module.scss"
 import u from "styles/Utils.module.scss"
 
@@ -50,7 +52,53 @@ function Experience() {
 }
 
 function Work() {
-  return <>{}</>
+  return (
+    <>
+      {work.map((project, idx) => (
+        <div className={`${s.project} ${idx % 2 !== 0 ? s.reverse : ""}`}>
+          <div>
+            <header>
+              <p className={s.featured}>Featured project</p>
+              <h3 className={s.projectTitle}>{project.title}</h3>
+            </header>
+            <article>
+              <p className={s.body}>{project.body}</p>
+            </article>
+            <footer>
+              <ul className={s.stack}>
+                {project.stack.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+              <div className={s.workLinks}>
+                <a href={project.repo} target="_blank" rel="noreferrer">
+                  <span className={u.srOnly}>Link to GitHub repo</span>
+                  <GitHubWork />
+                </a>
+                <a href={project.url} target="_blank" rel="noreferrer">
+                  <span className={u.srOnly}>Link to live site</span>
+                  <ExternalLink />
+                </a>
+              </div>
+            </footer>
+          </div>
+          <div>
+            <a href={project.url} target="_blank" rel="noreferrer">
+              <div className={s.screenshot}>
+                <div className={s.under} />
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={750}
+                  height={450}
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+      ))}
+    </>
+  )
 }
 
 export function Sections() {
