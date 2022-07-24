@@ -14,7 +14,7 @@
 }
 
 .intro {
-  line-height: 2;
+  line-height: 0;
   font-family: 'Gt Pressura', monospace;
   font-size: 1.6rem;
   color: var(--grey-850);
@@ -178,6 +178,7 @@
 .about {
   width: 700px;
   margin-bottom: 7rem;
+  margin-inline: auto;
 }
 
 .skillsList {
@@ -204,3 +205,18 @@
     }
   }
 }
+
+.contact {
+  width: 700px;
+  text-align: center;
+  margin-bottom: 15rem;
+  margin-inline: auto;
+  h3 {
+    font-family: 'Gt Pressura', serif;
+    font-size: 4rem;
+    line-height: 0.4;
+    margin-bottom: 3rem;
+    font-weight: 700;
+  }
+}
+
