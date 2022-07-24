@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Script
         src="https://plausible.io/js/plausible.js"
-        data-domain="https://mattcook.dev"
+        data-domain="mattcook.dev"
       />
       <Component {...pageProps} />
     </>
