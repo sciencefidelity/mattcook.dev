@@ -22,22 +22,29 @@ main {
   margin: 0 auto;
 }
 
-section {
-  padding-top: 9rem;
-}
-
 p {
   font-family: 'Gt Pressura', serif;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   line-height: 1.35;
   color: var(--grey-650);
   margin-bottom: 1.4rem;
+  @include b.mq(xs) {
+    font-size: 1.3rem;
+  }
+  @include b.mq(sm) {
+    font-size: 1.4rem;
+  }
 }
 
 footer {
   font-family: 'Gt Pressura Mono', monospace;
   text-align: center;
-  padding-block: 1rem 2rem;
+  padding-block: 1rem 1.2rem;
+  font-size: 1rem;
+  @include b.mq(sm) {
+    padding-block: 1rem 2rem;
+    font-size: inherit;
+  }
   a {
     color: var(--grey-850);
   }

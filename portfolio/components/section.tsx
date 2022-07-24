@@ -62,6 +62,14 @@ function Work() {
               <h3 className={s.projectTitle}>{project.title}</h3>
             </header>
             <article>
+              <div className={s.screenshotSmall}>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={750}
+                  height={450}
+                />
+              </div>
               <p className={s.body}>{project.body}</p>
             </article>
             <footer>
@@ -85,7 +93,6 @@ function Work() {
           <div>
             <a href={project.url} target="_blank" rel="noreferrer">
               <div className={s.screenshot}>
-                <div className={s.under} />
                 <Image
                   src={project.image}
                   alt={project.title}

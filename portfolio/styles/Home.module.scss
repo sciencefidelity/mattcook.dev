@@ -1,46 +1,75 @@
+@use 'base/breakpoints' as b;
+
 .header {
   height: 100vh;
 }
 
 .container {
-  height: 94%;
+  height: 100%;
+  max-width: 90%;
+  margin-inline: auto;
+  @include b.mq(sm) {
+    height: 94%;
+  }
 }
 
 .asterisk {
-  width: 30rem;
+  width: 13rem;
   position: absolute;
-  left: -5rem;
-  top: -6rem;
+  left: -2rem;
+  top: -3rem;
+  @include b.mq(sm) {
+    left: -5rem;
+    top: -6rem;
+    width: 20rem;
+  }
+  @include b.mq(md) {
+    left: -5rem;
+    top: -6rem;
+    width: 30rem;
+  }
 }
 
 .intro {
   line-height: 0;
   font-family: 'Gt Pressura', monospace;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--grey-850);
+  @include b.mq(sm) {
+    font-size: 1.6rem;
+  }
 }
 
 .logo {
   font-family: 'Space Mono', monospace;
-  font-size: 7rem;
   color: #00B5DD;
   font-weight: 700;
   line-height: 1.2;
   font-style: italic;
+  font-size: 14.7vw;
+  @include b.mq(sm) {
+    font-size: 7rem;
+  }
 }
 
 .subheading {
   font-family: 'Gt Pressura', serif;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  @include b.mq(sm) {
+    font-size: 1.8rem;
+  }
 }
 
 .nav {
+  // display: none;
   margin-top: 0.7rem;
   margin-right: 2rem;
   font-family: 'Gt pressura Mono', monospace;
   font-size: 1.6rem;
-  display: grid;
   justify-content: end;
+  @include b.mq(sm) {
+    display: grid;
+  }
   a {
     color: var(--grey-750);
     text-decoration: none;
@@ -50,10 +79,35 @@
   }
 }
 
+.navList {
+  text-align: right;
+  position: absolute;
+  right: 1rem;
+  font-family: 'Gt Pressura', serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  @include b.mq(sm) {
+    text-align: unset;
+    position: unset;
+    gap: 3rem;
+    flex-direction: row;
+  }
+  li {
+    line-height: 1;
+    padding-block: 0.7rem;
+    font-size: 1.3rem;
+    @include b.mq(sm) {
+      line-height: 2.3;
+      font-size: 1.4rem;
+    }
+  }
+}
+
 .btn {
   font-family: 'Gt Pressura', serif;
   padding: 1rem 1.5rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   background-color: transparent;
   border: 2px solid #00B5DD;
   color: #00B5DD;
@@ -61,6 +115,9 @@
   border-radius: 0.3rem;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
+  @include b.mq(sm) {
+    font-size: 1.4rem;
+  }
   &:hover {
     background-color: hsl(191, 63%, 93%);
   }
@@ -71,18 +128,6 @@
   margin-top: unset;
 }
 
-.navList {
-  font-family: 'Gt Pressura', serif;
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  li {
-    line-height: 2.3;
-    padding-block: 0.7rem;
-    font-size: 1.4rem;
-  }
-}
-
 .number {
   font-family: 'Gt pressura Mono', monospace;
   font-size: 1.2rem;
@@ -90,10 +135,14 @@
 
 .email,
 .links {
+  display: none;
   font-family: 'Gt pressura Mono', monospace;
   position: fixed;
   transform: rotate(90deg);
   font-size: 1.3rem;
+  @include b.mq(sm) {
+    display: unset;
+  }
   &::after {
     position: absolute;
     display: block;
@@ -115,7 +164,11 @@
 
 .email {
   bottom: 12rem;
-  right: -2rem;
+  right: -4.2rem;
+  @include b.mq(md) {
+    bottom: 12rem;
+    right: -2rem;
+  }
   &::after {
     left: 14rem;
   }
@@ -123,7 +176,11 @@
 
 .links {
   bottom: 11rem;
-  left: 0.8rem;
+  left: -1.8rem;
+  @include b.mq(md) {
+    bottom: 11rem;
+    left: 0.8rem;
+  }
   &::after {
     left: 11rem;
   }
@@ -157,13 +214,15 @@
 }
 
 .about {
+  padding-top: 9rem;
   width: 700px;
+  max-width: 90%;
   margin-bottom: 7rem;
   margin-inline: auto;
 }
 
 .skillsList {
-  width: 500px;
+  width: unset;
   margin-top: 1.7rem;
   font-family: 'Gt pressura Mono', monospace;
   display: grid;
@@ -172,10 +231,16 @@
   gap: 0.9rem;
   color: var(--grey-650);
   position: relative;
+  @include b.mq(sm) {
+    width: 500px;
+  }
   li {
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-left: 2rem;
+    @include b.mq(sm) {
+      font-size: 1.2rem;
+    }
     &::before {
       content: "▹";
       position: absolute;
@@ -188,20 +253,32 @@
 }
 
 .contact {
+  padding-top: 9rem;
   width: 700px;
+  max-width: 90%;
   text-align: center;
   margin-bottom: 15rem;
   margin-inline: auto;
   h3 {
     font-family: 'Gt Pressura', serif;
-    font-size: 4rem;
+    font-size: 3.4rem;
     line-height: 0.4;
     margin-bottom: 3rem;
     font-weight: 700;
+    @include b.mq(sm) {
+      font-size: 3rem;
+    }
   }
 }
 
 .work {
+  padding-top: 4rem;
+  max-width: 90%;
+  margin-inline: auto;
+  @include b.mq(sm) {
+    padding-top: 9rem;
+    grid-template-columns: 1fr 1.1fr;
+  }
   h2 {
     margin-bottom: 4rem;
   }
@@ -209,8 +286,12 @@
 
 .project {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  margin-bottom: 9rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 5rem;
+  @include b.mq(sm) {
+    margin-bottom: 9rem;
+    grid-template-columns: 1fr 1.1fr;
+  }
 }
 
 .featured {
@@ -231,30 +312,56 @@
 
 .body {
   background-color: #C6EAF2;
-  font-size: 1.2rem;
-  padding: 2rem 3rem 2rem 2rem;
+  font-size: 1.15rem;
   color: var(--grey-850);
   margin-bottom: 0;
+  padding: 1.7rem 1.7rem 1.7rem 1.7rem;
+  border: 1px solid #C6EAF2;
+  @include b.mq(sm) {
+    font-size: 1.2rem;
+    padding: 2rem 3rem 2rem 2rem;
+    border: 0;
+  }
 }
 
 .stack {
   font-family: 'Gt Pressura Mono', monospace;
   display: flex;
-  gap: 1.5rem;
+  gap: 0.5rem 1.5rem;
   color: var(--grey-600);
+  flex-wrap: wrap;
+  @include b.mq(sm) {
+    gap: 1.5rem;
+  }
 }
 
 .screenshot {
+  display: none;
   position: relative;
   aspect-ratio: 5/3;
+  @include b.mq(sm) {
+    display: unset;
+  }
   & > span {
-    position: absolute;
-    left: -1rem;
     border: 1px solid #00B5DD !important;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 1rem 1rem #00B5DD;
+    @include b.mq(sm) {
+      position: absolute;
+      left: -1rem;
+      box-shadow: 1rem 1rem #00B5DD;
+    }
+  }
+}
+
+.screenshotSmall {
+  display: block;
+  margin-bottom: -0.3rem;
+  position: relative;
+  aspect-ratio: 5/3;
+  @include b.mq(sm) {
+    display: none;
+  }
+  & > span {
+    border: 2px solid #C6EAF2 !important;
   }
 }
 
@@ -263,6 +370,10 @@
   flex-direction: row;
   margin-top: 1.3rem;
   gap: 0.9rem;
+  justify-content: end;
+  @include b.mq(sm) {
+    justify-content: unset;
+  }
 }
 
 .workIcon {
@@ -270,49 +381,40 @@
   color: #00B5DD;
 }
 
-// .under {
-//   width: 100%;
-//   height: 100%;
-//   background-color: #00B5DD;
-//   position: absolute;
-//   top: 0.75rem;
-//   left: 1rem;
-// }
-
 .reverse {
-  text-align: right;
-  grid-template-columns: 1.1fr 1fr;
+  @include b.mq(sm) {
+    text-align: right;
+    grid-template-columns: 1.1fr 1fr;
+  }
   .body {
-    padding: 2rem 2rem 2rem 3rem;
+    @include b.mq(sm) {
+      padding: 2rem 2rem 2rem 3rem;
+    }
   }
   .stack,
   .workLinks {
-    justify-content: end;
+    @include b.mq(sm) {
+      justify-content: end;
+    }
   }
   div:first-child {
-    grid-column: 2;
-    grid-row: 1;
+    @include b.mq(sm) {
+      grid-column: 2;
+      grid-row: 1;
+    }
   }
   .under {
-    top: 0.75rem;
-    left: -1rem;
+    @include b.mq(sm) {
+      top: 0.75rem;
+      left: -1rem;
+    }
   }
   .screenshot {
     & > span {
-      left: 1rem;
-      box-shadow: -1rem 1rem #00B5DD;
+      @include b.mq(sm) {
+        left: 1rem;
+        box-shadow: -1rem 1rem #00B5DD;
+      }
     }
   }
-}
-
-.footerIconContainer {
-  display: grid;
-  text-align: center;
-  justify-content: center;
-  width: 3rem;
-  margin: auto;
-}
-
-.footerIcon {
-  color: var(--grey-600);
 }
