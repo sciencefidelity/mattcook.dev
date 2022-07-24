@@ -9,7 +9,11 @@
   max-width: 90%;
   margin-inline: auto;
   @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(md) {
     height: 94%;
+    max-width: 90%;
   }
 }
 
@@ -48,6 +52,9 @@
   font-style: italic;
   font-size: 14.7vw;
   @include b.mq(sm) {
+    font-size: 4.3rem;
+  }
+  @include b.mq(md) {
     font-size: 7rem;
   }
 }
@@ -56,6 +63,9 @@
   font-family: 'Gt Pressura', serif;
   font-size: 1.4rem;
   @include b.mq(sm) {
+    font-size: 1.6em;
+  }
+  @include b.mq(md) {
     font-size: 1.8rem;
   }
 }
@@ -82,12 +92,14 @@
 .navList {
   text-align: right;
   position: absolute;
-  right: 1rem;
   font-family: 'Gt Pressura', serif;
   display: flex;
   flex-direction: column;
   gap: 0;
   @include b.mq(sm) {
+    right: 2rem;
+  }
+  @include b.mq(md) {
     text-align: unset;
     position: unset;
     gap: 3rem;
@@ -98,8 +110,11 @@
     padding-block: 0.7rem;
     font-size: 1.3rem;
     @include b.mq(sm) {
-      line-height: 2.3;
       font-size: 1.4rem;
+      line-height: 1.6;
+    }
+    @include b.mq(md) {
+      line-height: 2.3;
     }
   }
 }
@@ -219,6 +234,12 @@
   max-width: 90%;
   margin-bottom: 7rem;
   margin-inline: auto;
+  @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(md) {
+    max-width: 90%;
+  }
 }
 
 .skillsList {
@@ -259,6 +280,12 @@
   text-align: center;
   margin-bottom: 15rem;
   margin-inline: auto;
+  @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(md) {
+    max-width: 90%;
+  }
   h3 {
     font-family: 'Gt Pressura', serif;
     font-size: 3.4rem;
@@ -276,6 +303,10 @@
   max-width: 90%;
   margin-inline: auto;
   @include b.mq(sm) {
+    max-width: 73%;
+  }
+  @include b.mq(md) {
+    max-width: 90%;
     padding-top: 9rem;
     grid-template-columns: 1fr 1.1fr;
   }
@@ -288,7 +319,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 5rem;
-  @include b.mq(sm) {
+  @include b.mq(md) {
     margin-bottom: 9rem;
     grid-template-columns: 1fr 1.1fr;
   }
@@ -307,6 +338,12 @@
   font-weight: 700;
   font-size: 1.6rem;
   margin-bottom: 1.1rem;
+  @include b.mq(sm) {
+    font-size: 1.9rem;
+  }
+  @include b.mq(md) {
+    font-size: 1.6rem;
+  }
 }
 
 
@@ -317,7 +354,7 @@
   margin-bottom: 0;
   padding: 1.7rem 1.7rem 1.7rem 1.7rem;
   border: 1px solid #C6EAF2;
-  @include b.mq(sm) {
+  @include b.mq(md) {
     font-size: 1.2rem;
     padding: 2rem 3rem 2rem 2rem;
     border: 0;
@@ -330,7 +367,7 @@
   gap: 0.5rem 1.5rem;
   color: var(--grey-600);
   flex-wrap: wrap;
-  @include b.mq(sm) {
+  @include b.mq(md) {
     gap: 1.5rem;
   }
 }
@@ -339,12 +376,12 @@
   display: none;
   position: relative;
   aspect-ratio: 5/3;
-  @include b.mq(sm) {
+  @include b.mq(md) {
     display: unset;
   }
   & > span {
     border: 1px solid #00B5DD !important;
-    @include b.mq(sm) {
+    @include b.mq(md) {
       position: absolute;
       left: -1rem;
       box-shadow: 1rem 1rem #00B5DD;
@@ -357,7 +394,7 @@
   margin-bottom: -0.3rem;
   position: relative;
   aspect-ratio: 5/3;
-  @include b.mq(sm) {
+  @include b.mq(md) {
     display: none;
   }
   & > span {
@@ -371,7 +408,7 @@
   margin-top: 1.3rem;
   gap: 0.9rem;
   justify-content: end;
-  @include b.mq(sm) {
+  @include b.mq(md) {
     justify-content: unset;
   }
 }
@@ -382,36 +419,36 @@
 }
 
 .reverse {
-  @include b.mq(sm) {
+  @include b.mq(md) {
     text-align: right;
     grid-template-columns: 1.1fr 1fr;
   }
   .body {
-    @include b.mq(sm) {
+    @include b.mq(md) {
       padding: 2rem 2rem 2rem 3rem;
     }
   }
   .stack,
   .workLinks {
-    @include b.mq(sm) {
+    @include b.mq(md) {
       justify-content: end;
     }
   }
   div:first-child {
-    @include b.mq(sm) {
+    @include b.mq(md) {
       grid-column: 2;
       grid-row: 1;
     }
   }
   .under {
-    @include b.mq(sm) {
+    @include b.mq(md) {
       top: 0.75rem;
       left: -1rem;
     }
   }
   .screenshot {
     & > span {
-      @include b.mq(sm) {
+      @include b.mq(md) {
         left: 1rem;
         box-shadow: -1rem 1rem #00B5DD;
       }

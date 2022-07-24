@@ -32,6 +32,9 @@ p {
     font-size: 1.3rem;
   }
   @include b.mq(sm) {
+    font-size: 1.3rem;
+  }
+  @include b.mq(md) {
     font-size: 1.4rem;
   }
 }
