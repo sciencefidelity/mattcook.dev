@@ -38,7 +38,7 @@ function Contact() {
         <br />
         Drop me a line, I&rsquo;d love to hear from you.
       </p>
-      <a href="mailto:hello@mattcook.dev">
+      <a href="mailto:hello@mattcook.dev" tabIndex={-1}>
         <button type="button" className={`${s.btn}`}>
           Say Hey 👋
         </button>

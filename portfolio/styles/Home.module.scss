@@ -304,3 +304,15 @@
     }
   }
 }
+
+.footerIconContainer {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  width: 3rem;
+  margin: auto;
+}
+
+.footerIcon {
+  color: var(--grey-600);
+}

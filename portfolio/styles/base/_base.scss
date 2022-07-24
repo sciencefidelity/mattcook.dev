@@ -38,6 +38,9 @@ footer {
   font-family: 'Gt Pressura Mono', monospace;
   text-align: center;
   padding-block: 1rem 2rem;
+  a {
+    color: var(--grey-850);
+  }
 }
 
 // @media (prefers-color-scheme: dark) {

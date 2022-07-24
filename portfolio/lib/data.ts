@@ -10,18 +10,18 @@ export const sections = [
     menu: "About",
     heading: "About me.",
   },
+  // {
+  //   id: 2,
+  //   menu: "Experience",
+  //   heading: "Where I’ve worked.",
+  // },
   {
     id: 2,
-    menu: "Experience",
-    heading: "Where I’ve worked.",
-  },
-  {
-    id: 3,
     menu: "Work",
     heading: "Recent things I’ve built.",
   },
   {
-    id: 4,
+    id: 3,
     menu: "Contact",
     heading: "Let’s talk.",
   },

@@ -21,7 +21,16 @@ export function Footer() {
       <div className={s.email}>
         <a href="mailto:hello@mattcook.dev">hello@mattcook.dev</a>
       </div>
-      Site by Matt {new Date().getFullYear()}
+      <div>
+        <a
+          href="https://github.com/sciencefidelity/mattcook.dev"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Site
+        </a>{" "}
+        by Matt {new Date().getFullYear()}
+      </div>
     </footer>
   )
 }

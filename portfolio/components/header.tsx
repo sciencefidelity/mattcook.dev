@@ -20,7 +20,7 @@ export function Header() {
               </li>
             ))}
             <li>
-              <a href="/mattcook-cv-july22.pdf" target="_blank">
+              <a href="/mattcook-cv-july22.pdf" target="_blank" tabIndex={-1}>
                 <button type="button" className={`${s.btn} ${s.btnResume}`}>
                   CV
                 </button>
@@ -39,7 +39,7 @@ export function Header() {
           <h2 className={s.subheading}>
             I build solutions for the modern web.
           </h2>
-          <a href="#contact">
+          <a href="#contact" tabIndex={-1}>
             <button type="button" className={s.btn}>
               Get in touch
             </button>
