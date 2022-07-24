@@ -21,7 +21,7 @@ function About() {
       <p>Here are a few of my current most loved technologies:</p>
       <ul className={s.skillsList}>
         {skills.map((skill) => (
-          <li>{skill}</li>
+          <li key={skill}>{skill}</li>
         ))}
       </ul>
     </>
@@ -55,7 +55,10 @@ function Work() {
   return (
     <>
       {work.map((project, idx) => (
-        <div className={`${s.project} ${idx % 2 !== 0 ? s.reverse : ""}`}>
+        <div
+          key={project.id}
+          className={`${s.project} ${idx % 2 !== 0 ? s.reverse : ""}`}
+        >
           <div>
             <header>
               <p className={s.featured}>Featured project</p>

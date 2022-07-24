@@ -2,7 +2,7 @@ import mwaScreenshot from "public/images/mwa-home-desktop.jpg";
 import naenScreenshot from "public/images/naen-home-desktop.jpg";
 import knappScreenshot from "public/images/knapp-home-desktop.jpg";
 
-export const menu = ["About", "Experience", "Work", "Contact"];
+// export const menu = ["About", "Experience", "Work", "Contact"];
 
 export const sections = [
   {
@@ -53,6 +53,7 @@ export const social = [
 
 export const work = [
   {
+    id: 1,
     title: "Mid Wales Arts",
     body: "Design and build of a multilingual static site for a vibrant arts and culture centre. Includes dynamic pages for news, events, workshops, exhibitions and artists that are updated  via a custom CMS used by non-technical content editors.",
     stack: ["React", "TypeScript", "Next.js", "Sanity", "GROQ", "Sass"],
@@ -61,16 +62,18 @@ export const work = [
     image: mwaScreenshot,
   },
   {
+    id: 2,
     title: "National Arts & Education Network",
-    body: "Site for a national education training provider. Includes a platform for course documentation and videos, events. Sanity Studio includes custom implemenations of a newsletter builder and Eventbrite connection to the Eventbrite API.",
+    body: "Site for a national education training provider. Includes a platform for course documentation and videos, events. Sanity Studio includes custom implementations of a newsletter builder and Eventbrite connection to the Eventbrite API.",
     stack: ["React", "TypeScript", "Remix", "Eventbrite API", "Mapbox"],
     url: "https://artsed.wales",
     repo: "https://github.com/sciencefidelity/artsed.wales",
     image: naenScreenshot,
   },
   {
+    id: 3,
     title: "The Estate of Stefan Knapp",
-    body: "Multilingual static site for the centenery of the famous Polish and British artist Stefan Knapp. The site is built with Astro and Vue and includes a custom SSG solution built with Vite. The site data is published in Sanity Studio and queried with GROQ.",
+    body: "Multilingual static site for the centenary of the famous Polish and British artist Stefan Knapp. The site is built with Astro and Vue and includes a custom SSG solution built with Vite. The site data is published in Sanity Studio and queried with GROQ.",
     stack: ["Vue", "Astro", "TypeScript", "Vite", "Sanity", "GROQ", "Sass"],
     url: "https://stefanknapp.art",
     repo: "https://github.com/sciencefidelity/stefanknapp.art",
@@ -80,18 +83,21 @@ export const work = [
 
 export const projects = [
   {
+    id: 1,
     title: "Nova-Dart",
-    body: "IDE extention for Nova with syntax highlighting, LSP and daemon integration, code completions, clips and auto start for Flutter app development.",
+    body: "IDE extension for Nova with syntax highlighting, LSP and daemon integration, code completions, clips and auto start for Flutter app development.",
     stack: ["TypeScript", "Nova"],
     repo: "https://github.com/sciencefidelity/Nova-Dart",
   },
   {
+    id: 2,
     title: "Nova-Astro",
-    body: "IDE extention for Nova with syntax highlighting, LSP integration, code completions, clips for developing static sites with Astro.js.",
+    body: "IDE extension for Nova with syntax highlighting, LSP integration, code completions, clips for developing static sites with Astro.js.",
     stack: ["TypeScript", "Nova"],
     repo: "https://github.com/sciencefidelity/Nova-Dart",
   },
   {
+    id: 3,
     title: "Sanity SEO Preview",
     body: "A live preview of social shares on Facebook and Twitter, and Google search results for integration into Sanity Studio.",
     stack: ["React", "TypeScript", "Sanity.io"],
@@ -101,6 +107,7 @@ export const projects = [
 
 export const experience = [
   {
+    id: 1,
     role: "Front-End Developer",
     organisation: "National Arts & Education Network",
     dates: "Sept 2019 – present",
@@ -113,6 +120,7 @@ export const experience = [
     ],
   },
   {
+    id: 2,
     role: "Front-End Developer",
     organisation: "Mid Wales Arts",
     dates: "July 2020 – present",
@@ -126,6 +134,7 @@ export const experience = [
     ],
   },
   {
+    id: 3,
     role: "Web Developer",
     organisation: "Freelance",
     dates: "May 2012 – present",
@@ -136,6 +145,7 @@ export const experience = [
     ],
   },
   {
+    id: 4,
     role: "Studio Director",
     organisation: "Warwick Hall Studios",
     dates: "Oct 2011 – present",
@@ -144,6 +154,7 @@ export const experience = [
     ],
   },
   {
+    id: 5,
     role: "Artist",
     organisation: "Freelance",
     dates: "August 2002 – present",

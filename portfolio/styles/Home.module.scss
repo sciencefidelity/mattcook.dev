@@ -11,7 +11,7 @@
   @include b.mq(sm) {
     max-width: 73%;
   }
-  @include b.mq(md) {
+  @include b.mq(lg) {
     height: 94%;
     max-width: 90%;
   }
@@ -28,9 +28,19 @@
     width: 20rem;
   }
   @include b.mq(md) {
+    left: -3rem;
+    top: -7rem;
+    width: 20rem;
+  }
+  @include b.mq(lg) {
     left: -5rem;
-    top: -6rem;
-    width: 30rem;
+    top: -8rem;
+    width: 25rem;
+  }
+  @include b.mq(xl) {
+    left: -7rem;
+    top: -8rem;
+    width: 28rem;
   }
 }
 
@@ -55,6 +65,9 @@
     font-size: 4.3rem;
   }
   @include b.mq(md) {
+    font-size: 5.7rem;
+  }
+  @include b.mq(lg) {
     font-size: 7rem;
   }
 }
@@ -71,15 +84,12 @@
 }
 
 .nav {
-  // display: none;
+  display: grid;
   margin-top: 0.7rem;
   margin-right: 2rem;
   font-family: 'Gt pressura Mono', monospace;
   font-size: 1.6rem;
   justify-content: end;
-  @include b.mq(sm) {
-    display: grid;
-  }
   a {
     color: var(--grey-750);
     text-decoration: none;
@@ -96,10 +106,13 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  right: 1.2rem;
   @include b.mq(sm) {
-    right: 2rem;
   }
   @include b.mq(md) {
+    right: 2rem;
+  }
+  @include b.mq(lg) {
     text-align: unset;
     position: unset;
     gap: 3rem;
@@ -113,7 +126,7 @@
       font-size: 1.4rem;
       line-height: 1.6;
     }
-    @include b.mq(md) {
+    @include b.mq(lg) {
       line-height: 2.3;
     }
   }
@@ -181,7 +194,9 @@
   bottom: 12rem;
   right: -4.2rem;
   @include b.mq(md) {
-    bottom: 12rem;
+    right: -3.1rem;
+  }
+  @include b.mq(lg) {
     right: -2rem;
   }
   &::after {
@@ -193,7 +208,9 @@
   bottom: 11rem;
   left: -1.8rem;
   @include b.mq(md) {
-    bottom: 11rem;
+    left: -0.5rem;
+  }
+  @include b.mq(lg) {
     left: 0.8rem;
   }
   &::after {
@@ -237,8 +254,15 @@
   @include b.mq(sm) {
     max-width: 73%;
   }
-  @include b.mq(md) {
+  @include b.mq(lg) {
     max-width: 90%;
+    padding-top: 11rem;
+    margin-bottom: 9rem;
+  }
+  @include b.mq(xl) {
+    max-width: 90%;
+    padding-top: 9rem;
+    margin-bottom: 7rem;
   }
 }
 
@@ -283,7 +307,7 @@
   @include b.mq(sm) {
     max-width: 73%;
   }
-  @include b.mq(md) {
+  @include b.mq(lg) {
     max-width: 90%;
   }
   h3 {
@@ -305,10 +329,12 @@
   @include b.mq(sm) {
     max-width: 73%;
   }
-  @include b.mq(md) {
+  @include b.mq(lg) {
+    max-width: 68%;
+  }
+  @include b.mq(xl) {
     max-width: 90%;
     padding-top: 9rem;
-    grid-template-columns: 1fr 1.1fr;
   }
   h2 {
     margin-bottom: 4rem;
@@ -319,7 +345,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-bottom: 5rem;
-  @include b.mq(md) {
+  @include b.mq(xl) {
     margin-bottom: 9rem;
     grid-template-columns: 1fr 1.1fr;
   }
@@ -331,6 +357,12 @@
   font-size: 1.1rem;
   margin: unset;
   margin-bottom: 0.6rem;
+  @include b.mq(lg) {
+    font-size: 1.3rem;
+  }
+  @include b.mq(xl) {
+    font-size: 1rem;
+  }
 }
 
 .projectTitle {
@@ -341,8 +373,11 @@
   @include b.mq(sm) {
     font-size: 1.9rem;
   }
-  @include b.mq(md) {
-    font-size: 1.6rem;
+  @include b.mq(lg) {
+    font-size: 2rem;
+  }
+  @include b.mq(xl) {
+    font-size: 1.5rem;
   }
 }
 
@@ -354,9 +389,14 @@
   margin-bottom: 0;
   padding: 1.7rem 1.7rem 1.7rem 1.7rem;
   border: 1px solid #C6EAF2;
-  @include b.mq(md) {
+  @include b.mq(lg) {
+    font-size: 1.45rem;
+    padding: 2rem 2rem 2rem 2rem;
+    border: 0;
+  }
+  @include b.mq(xl) {
+    padding: 1.5rem 2rem 1.7rem 2rem;
     font-size: 1.2rem;
-    padding: 2rem 3rem 2rem 2rem;
     border: 0;
   }
 }
@@ -367,7 +407,12 @@
   gap: 0.5rem 1.5rem;
   color: var(--grey-600);
   flex-wrap: wrap;
-  @include b.mq(md) {
+  font-size: unset;
+  @include b.mq(lg) {
+    font-size: 1.15rem;
+  }
+  @include b.mq(xl) {
+    font-size: 0.9rem;
     gap: 1.5rem;
   }
 }
@@ -376,7 +421,7 @@
   display: none;
   position: relative;
   aspect-ratio: 5/3;
-  @include b.mq(md) {
+  @include b.mq(xl) {
     display: unset;
   }
   & > span {
@@ -394,7 +439,7 @@
   margin-bottom: -0.3rem;
   position: relative;
   aspect-ratio: 5/3;
-  @include b.mq(md) {
+  @include b.mq(xl) {
     display: none;
   }
   & > span {
@@ -408,7 +453,7 @@
   margin-top: 1.3rem;
   gap: 0.9rem;
   justify-content: end;
-  @include b.mq(md) {
+  @include b.mq(xl) {
     justify-content: unset;
   }
 }
@@ -419,36 +464,36 @@
 }
 
 .reverse {
-  @include b.mq(md) {
+  @include b.mq(xl) {
     text-align: right;
     grid-template-columns: 1.1fr 1fr;
   }
   .body {
-    @include b.mq(md) {
-      padding: 2rem 2rem 2rem 3rem;
+    @include b.mq(xl) {
+      padding: 1.5rem 2rem 1.7rem 2rem;
     }
   }
   .stack,
   .workLinks {
-    @include b.mq(md) {
+    @include b.mq(xl) {
       justify-content: end;
     }
   }
   div:first-child {
-    @include b.mq(md) {
+    @include b.mq(xl) {
       grid-column: 2;
       grid-row: 1;
     }
   }
   .under {
-    @include b.mq(md) {
+    @include b.mq(xl) {
       top: 0.75rem;
       left: -1rem;
     }
   }
   .screenshot {
     & > span {
-      @include b.mq(md) {
+      @include b.mq(xl) {
         left: 1rem;
         box-shadow: -1rem 1rem #00B5DD;
       }

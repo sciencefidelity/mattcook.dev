@@ -37,7 +37,8 @@ export function Header() {
             Matt Cook<span className={s.dot}>.</span>
           </h1>
           <h2 className={s.subheading}>
-            I build solutions for the modern web.
+            I build creative solutions for the web.
+            {/* I build solutions for the modern web. */}
           </h2>
           <a href="#contact" tabIndex={-1}>
             <button type="button" className={s.btn}>
