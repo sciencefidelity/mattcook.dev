@@ -71,13 +71,6 @@ module.exports = {
     "unicorn/prevent-abbreviations": "off",
     // The builtin Next image element does not play nice with the Sanity CDN
     "@next/next/no-img-element": 0,
-    // Hard to know what to choose here, Airbnb prefers PascalCase,
-    // the default in Unicorn is kebab-case,
-    // Nextjs uses lowercase for pages and kebab-case for components in examples
-    "unicorn/filename-case": [
-      "error",
-      { case: "camelCase", ignore: ["next-env.d.ts"] },
-    ],
     // Disable JSDoc and setup linting of TSDoc
     "require-jsdoc": "off",
     "valid-jsdoc": "off",

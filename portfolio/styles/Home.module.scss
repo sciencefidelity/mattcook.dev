@@ -88,11 +88,10 @@
   font-size: 1.2rem;
 }
 
-.email {
+.email,
+.links {
   font-family: 'Gt pressura Mono', monospace;
   position: fixed;
-  bottom: 12rem;
-  right: -2rem;
   transform: rotate(90deg);
   font-size: 1.3rem;
   &::after {
@@ -104,7 +103,6 @@
     height: 0.15rem;
     background-color: #00B5DD;
     bottom: 0.5rem;
-    left: 14rem;
   }
   a {
     color: #00B5DD;
@@ -112,44 +110,23 @@
     &:hover {
       color: #00B5DD;
     }
+  }
+}
+
+.email {
+  bottom: 12rem;
+  right: -2rem;
+  &::after {
+    left: 14rem;
   }
 }
 
 .links {
-  font-family: 'Gt pressura Mono', monospace;
-  position: fixed;
   bottom: 11rem;
   left: 0.8rem;
-  transform: rotate(90deg);
-  font-size: 1.3rem;
   &::after {
-    position: absolute;
-    display: block;
-    content: '';
-    font-size: 1.2rem;
-    width: 13rem;
-    height: 0.15rem;
-    background-color: #00B5DD;
-    bottom: 0.5rem;
     left: 11rem;
   }
-  a {
-    color: #00B5DD;
-    text-decoration: none;
-    &:hover {
-      color: #00B5DD;
-    }
-  }
-}
-
-.icon {
-  width: 1.7rem;
-  transform: rotate(-90deg);
-}
-
-.dot {
-  // color: var(--grey-750);
-  color: #EA3546;
 }
 
 .socialLinks {
@@ -162,6 +139,15 @@
       color: #00B5DD;
     }
   }
+}
+
+.icon {
+  width: 1.7rem;
+  transform: rotate(-90deg);
+}
+
+.dot {
+  color: #EA3546;
 }
 
 .sectionHeading {
