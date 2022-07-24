@@ -10,13 +10,9 @@ export function Footer() {
           {social.map((site) => (
             <li>
               <a href={site.url} target="_blank" rel="noreferrer">
-                {site.site === "GitHub" ? (
-                  <GitHub />
-                ) : site.site === "LinkedIn" ? (
-                  <LinkedIn />
-                ) : (
-                  <Twitter />
-                )}
+                {site.site === "GitHub" && <GitHub />}
+                {site.site === "LinkedIn" && <LinkedIn />}
+                {site.site === "Twitter" && <Twitter />}
               </a>
             </li>
           ))}

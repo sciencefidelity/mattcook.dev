@@ -9,17 +9,17 @@ export const sections = [
   {
     id: 2,
     menu: "Experience",
-    heading: "Where I&rsquo;ve worked.",
+    heading: "Where I’ve worked.",
   },
   {
     id: 3,
     menu: "Work",
-    heading: "Recent things I&rsquo;ve built.",
+    heading: "Recent things I’ve built.",
   },
   {
     id: 4,
     menu: "Contact",
-    heading: "Let&rsquo;s talk.",
+    heading: "Let’s talk.",
   },
 ];
 
@@ -99,7 +99,7 @@ export const experience = [
   {
     role: "Front-End Developer",
     organisation: "National Arts & Education Network",
-    dates: "Sept 2019 &ndash; present",
+    dates: "Sept 2019 – present",
     responsibilities: [
       "Developed a website with React, Remix and TypeScript to advertise professional development events for teachers and artists in the Expressive Arts Curriculum.",
       "Designed and implemented digital marketing tools that have increased ticket sales and course attendance by 300%.",
@@ -111,7 +111,7 @@ export const experience = [
   {
     role: "Front-End Developer",
     organisation: "Mid Wales Arts",
-    dates: "July 2020 &ndash; present",
+    dates: "July 2020 – present",
     responsibilities: [
       "Developed a multilingual React website with Next.js to provide a beautiful and intuitive user experience on all devices.",
       "Designed a custom i18n implementation of Next.js and Sanity.io that enables all slugs and routes to be localised into English and Welsh to improve SEO.",
@@ -124,7 +124,7 @@ export const experience = [
   {
     role: "Web Developer",
     organisation: "Freelance",
-    dates: "May 2012 &ndash; present",
+    dates: "May 2012 – present",
     responsibilities: [
       "Development of unique websites for arts, culture and not-for-profit clients with front-end frameworks including React, Svelte and Vue.",
       "Design of custom content strategies with Sanity.io and Strapi, with integrated custom CMS implementations for non-technical content creators.",
@@ -134,7 +134,7 @@ export const experience = [
   {
     role: "Studio Director",
     organisation: "Warwick Hall Studios",
-    dates: "Oct 2011 &ndash; present",
+    dates: "Oct 2011 – present",
     responsibilities: [
       "Founded and continue to manage a charity providing affordable studios for 20 artists.",
     ],
@@ -142,7 +142,7 @@ export const experience = [
   {
     role: "Artist",
     organisation: "Freelance",
-    dates: "August 2002 &ndash; present",
+    dates: "August 2002 – present",
     responsibilities: [
       "Regular creation of unique multimedia art projects all over the world in galleries, theatres and the public realm using digital media, sound, video, and electronics.",
       "Regular teaching of arts workshops for children and teachers in animation, creative web development, video production and digital competency.",
