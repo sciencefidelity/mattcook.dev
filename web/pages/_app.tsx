@@ -6,10 +6,10 @@ import type { AppProps } from "next/app"
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Script
+      {/* <Script
         src="https://plausible.io/js/plausible.js"
         data-domain="mattcook.dev"
-      />
+      /> */}
       <Component {...pageProps} />
     </>
   )

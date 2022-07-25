@@ -89,7 +89,7 @@
   margin-right: 2rem;
   font-family: 'Gt pressura Mono', monospace;
   font-size: 1.6rem;
-  justify-content: end;
+  justify-content: flex-end;
   a {
     color: var(--grey-750);
     text-decoration: none;
@@ -452,7 +452,7 @@
   flex-direction: row;
   margin-top: 1.3rem;
   gap: 0.9rem;
-  justify-content: end;
+  justify-content: flex-end;
   @include b.mq(xl) {
     justify-content: unset;
   }
@@ -476,7 +476,7 @@
   .stack,
   .workLinks {
     @include b.mq(xl) {
-      justify-content: end;
+      justify-content: flex-end;
     }
   }
   div:first-child {
@@ -499,4 +499,69 @@
       }
     }
   }
+}
+
+.openSource {
+  margin-bottom: 10rem;
+  max-width: 990px;
+  margin-inline: auto;
+  h2 {
+    // text-align: center;
+    font-family: 'Gt Pressura', serif;
+    font-size: 2rem;
+    line-height: 0.4;
+    margin-bottom: 2rem;
+  }
+}
+
+
+.osGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(319px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gridItem {
+  display: flex;
+  margin-inline: auto;
+  flex-direction: column;
+  padding: 1.3rem 1.3rem 1.8rem 1.3rem;
+  background-color: #C6EAF2;
+}
+
+.osTitle {
+  font-family: 'Gt Pressura Mono', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.osBody {
+  font-size: 1.15rem;
+  color: var(--grey-850);
+  margin-bottom: 4rem;
+  border: 1px solid #C6EAF2;
+}
+
+.stackWrap {
+  margin-top: auto;
+}
+
+.osStack {
+  font-family: 'Gt Pressura Mono', monospace;
+  display: flex;
+  flex-direction: row;
+  gap: 0 1rem;
+}
+
+.osIcons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.osIcon {
+  color: var(--grey-700);
+  margin-right: auto;
 }
