@@ -2,4 +2,4 @@
 
 Placeholder for my portfolio.
 
-Made with [Astro](https://astro.build) and [Sanity](https://sanity.io).
+Made with [Next.js](https://nextjs.org) and [Sanity](https://sanity.io).
