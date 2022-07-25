@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { sections, skills, work } from "lib/data"
+import { projects, sections, skills, work } from "lib/data"
 import { GitHubWork, ExternalLink } from "components/icon"
 import s from "styles/Home.module.scss"
 import u from "styles/Utils.module.scss"
@@ -84,7 +84,7 @@ function Work() {
               <div className={s.workLinks}>
                 <a href={project.repo} target="_blank" rel="noreferrer">
                   <span className={u.srOnly}>Link to GitHub repo</span>
-                  <GitHubWork />
+                  <GitHubWork className="workIcon" />
                 </a>
                 <a href={project.url} target="_blank" rel="noreferrer">
                   <span className={u.srOnly}>Link to live site</span>
@@ -107,6 +107,30 @@ function Work() {
           </div>
         </div>
       ))}
+      <div className={s.openSource}>
+        <h2>Open Source</h2>
+        <div className={s.osGrid}>
+          {projects.map((project) => (
+            <div key={project.id} className={s.gridItem}>
+              <div className={s.osIcons}>
+                <a href={project.repo} target="_blank" rel="noreferrer">
+                  <span className={u.srOnly}>Link to GitHub repo</span>
+                  <GitHubWork className="osIcon" />
+                </a>
+              </div>
+              <h3 className={s.osTitle}>{project.title}</h3>
+              <p className={s.osBody}>{project.body}</p>
+              <div className={s.stackWrap}>
+                <ul className={s.osStack}>
+                  {project.stack.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   )
 }

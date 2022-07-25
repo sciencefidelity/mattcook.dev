@@ -94,7 +94,7 @@ export const projects = [
     title: "Nova-Astro",
     body: "IDE extension for Nova with syntax highlighting, LSP integration, code completions, clips for developing static sites with Astro.js.",
     stack: ["TypeScript", "Nova"],
-    repo: "https://github.com/sciencefidelity/Nova-Dart",
+    repo: "https://github.com/sciencefidelity/Nova-Astro",
   },
   {
     id: 3,
