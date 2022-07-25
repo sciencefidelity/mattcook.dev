@@ -101,7 +101,7 @@ export const projects = [
     title: "Sanity SEO Preview",
     body: "A live preview of social shares on Facebook and Twitter, and Google search results for integration into Sanity Studio.",
     stack: ["React", "TypeScript", "Sanity.io"],
-    repo: "https://github.com/sciencefidelity/sanity-seo-preview",
+    repo: "https://github.com/sciencefidelity/sanity-plugin-seo-preview",
   },
 ];
 
