@@ -85,7 +85,7 @@ export const projects = [
   {
     id: 1,
     title: "Nova-Dart",
-    body: "IDE extension for Nova with syntax highlighting, LSP and daemon integration, code completions, clips and auto start for Flutter app development.",
+    body: "IDE extension for Nova with syntax highlighting, LSP and daemon integration, code completions and clips for Flutter app development.",
     stack: ["TypeScript", "Nova"],
     repo: "https://github.com/sciencefidelity/Nova-Dart",
   },

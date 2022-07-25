@@ -503,38 +503,31 @@
 
 .openSource {
   margin-bottom: 10rem;
+  max-width: 990px;
+  margin-inline: auto;
   h2 {
     // text-align: center;
     font-family: 'Gt Pressura', serif;
     font-size: 2rem;
     line-height: 0.4;
     margin-bottom: 2rem;
-
   }
 }
 
 
 .osGrid {
-  position: relative;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(319px, 1fr));
+  justify-content: center;
   gap: 1rem;
-  @include b.mq(md) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @include b.mq(lg) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 .gridItem {
   display: flex;
   margin-inline: auto;
   flex-direction: column;
-  max-width: 320px;
   padding: 1.3rem 1.3rem 1.8rem 1.3rem;
   background-color: #C6EAF2;
-  aspect-ratio: 1;
 }
 
 .osTitle {
@@ -547,7 +540,7 @@
 .osBody {
   font-size: 1.15rem;
   color: var(--grey-850);
-  margin-bottom: 0;
+  margin-bottom: 4rem;
   border: 1px solid #C6EAF2;
 }
 
