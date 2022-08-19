@@ -4,7 +4,6 @@
   "private": true,
   "version": "0.1.0",
   "author": "Matt Cook <matt@sciencefidelity.co.uk>",
-  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git@github.com:sciencefidelity/mattcook.git"
