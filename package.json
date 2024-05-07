@@ -1,31 +1,38 @@
 {
   "name": "mattcook.dev",
-  "description": "Matt Cook – Artist, digital creative, developer",
+  "description": "Matt Cook – Software Engineer Portfolio",
   "private": true,
   "version": "0.1.0",
   "author": "Matt Cook <matt@sciencefidelity.co.uk>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:sciencefidelity/mattcook.git"
+    "url": "git@github.com:sciencefidelity/mattcook.dev.git"
   },
   "homepage": "https://mattcook.dev",
   "keywords": [
     "sanity",
-    "svelte"
+    "nextjs"
   ],
   "scripts": {
-    "build": "pnpm run build --parallel",
-    "dev": "pnpm run dev --parallel",
-    "format": "pnpm run format",
-    "build-studio": "(cd studio && npm run build)",
-    "build-web": "(cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
-    "graphql-deploy": "pnpm run graphql-deploy",
-    "lint": "pnpm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "eslint": "^8.17.0",
-    "typescript": "^4.7.3"
-  },
-  "dependencies": {}
+    "dev": "pnpm run --parallel -r dev",
+    "build": "pnpm run -r build",
+    "prestart": "pnpm run build",
+    "start": "pnpm run build && pnpm run --parallel -r start",
+    "test": "pnpm run -r test",
+    "deploy": "pnpm run -r deploy",
+    "test:watch": "pnpm run -r --parallel test:watch",
+    "studio:build": "pnpm run --filter studio build",
+    "studio:login": "pnpm run --filter studio login",
+    "studio:deploy": "pnpm run --filter studio deploy",
+    "studio:test": "pnpm run --filter studio test",
+    "studio:test:wach": "pnpm run --filter studio test:watch",
+    "web:dev": "pnpm run --filter web dev",
+    "web:start": "pnpm run --filter web dev",
+    "web:build": "pnpm run --filter web build",
+    "web:test": "pnpm run --filter web test",
+    "web:test:watch": "pnpm run --filter web test:watch",
+    "format": "pnpm run -r format",
+    "lint": "pnpm run -r lint",
+    "fix": "pnpm run -r fix"
+  }
 }
